@@ -9,11 +9,8 @@
   },
   "scripts": {
     "css:core:compressed": "node-sass --output-style=compressed --source-map=true ${npm_package_config_from}/styles/core.scss ${npm_package_config_to}/styles/core.min.css",
-    "css:core:uncompressed": "node-sass ${npm_package_config_from}/styles/core.scss ${npm_package_config_to}/styles/core.css",
     "css:advanced:compressed": "node-sass --output-style=compressed --source-map=true ${npm_package_config_from}/styles/advanced.scss ${npm_package_config_to}/styles/advanced.min.css",
-    "css:advanced:uncompressed": "node-sass ${npm_package_config_from}/styles/advanced.scss ${npm_package_config_to}/styles/advanced.css",
     "css:print:compressed": "node-sass --output-style=compressed --source-map=true ${npm_package_config_from}/styles/print.scss ${npm_package_config_to}/styles/print.min.css",
-    "css:print:uncompressed": "node-sass ${npm_package_config_from}/styles/print.scss ${npm_package_config_to}/styles/print.css",
     "css:sass": "npm-run-all --parallel css:core:* css:advanced:* css:print:*",
     "css:autoprefixer": "postcss ${npm_package_config_to}/styles/*.css --no-map --use autoprefixer -d ${npm_package_config_to}/styles/",
     "css": "npm-run-all --sequential css:sass css:autoprefixer",
@@ -23,7 +20,6 @@
     "fonts": "shx cp -r ${npm_package_config_from}/fonts/* ${npm_package_config_to}/fonts",
     "js:copypackages": "copyfiles -f ./node_modules/fontfaceobserver/fontfaceobserver.js ${npm_package_config_from}/js/libraries",
     "js:copylibraries": "shx cp -r ${npm_package_config_from}/js/libraries/* ${npm_package_config_to}/js/libraries/",
-    "webpack:uncompressed": "webpack --config webpack.config.js",
     "webpack:compressed": "webpack --config webpack.config.min.js",
     "js": "npm-run-all --parallel js:copypackages js:copylibraries webpack:*",
     "build": "npm-run-all --parallel css images fonts js",
@@ -33,9 +29,10 @@
     "watch:images:imagemin": "watch 'npm run images:imagemin' ${npm_package_config_from}/images --interval=1",
     "watch:fonts": "watch 'npm run fonts' ${npm_package_config_from}/fonts --interval=1",
     "watch:js:copylibraries": "watch 'npm run js:copylibraries' ${npm_package_config_from}/js/libraries --interval=1",
-    "watch:webpack:uncompressed": "webpack --watch --config webpack.config.js",
     "watch:webpack:compressed": "webpack --watch --config webpack.config.min.js",
-    "watch": "npm-run-all --parallel watch:* watch:*:*"
+    "watch": "npm-run-all --parallel watch:* watch:*:*",
+    "eleventy:serve": "npx eleventy --serve",
+    "start": "npm-run-all --parallel watch eleventy:serve"
   },
   "repository": {
     "type": "git",

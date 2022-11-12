@@ -1,5 +1,5 @@
-{% extends "layouts/base.html" %} {% set pageCriticalStyles = ['css/home.css']
-%} {% block content %}
+{% extends "layouts/base.html" %} 
+{% block content %}
 <div class="wrapper">
   <article class="intro">
     <div class="[ intro__header ] [ radius frame ]">
@@ -39,4 +39,5 @@
 {% set ctaContent = primaryCTA %} {% include "partials/cta.html" %} {% include
 "partials/media-space.html" %} {% include "partials/key-facts.html" %} {%
 include "partials/recent-feed.html" %} {% set ctaContent = cta %} {% include
-"partials/cta.html" %} {% endblock %}
+"partials/cta.html" %} 
+{% include "partials/fifty-fifty.html" %} {% endblock %}

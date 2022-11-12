@@ -16,17 +16,17 @@
 
     <link rel="home" href="https://advocatherine.expert/"/>
 
-    <script src="/dist/assets/js/libraries/fontfaceobserver.js"></script>
+    <script src="/assets/js/libraries/fontfaceobserver.js"></script>
 
     <script>
         let myFont = new FontFaceObserver('Noto Sans');
         Promise.all([myFont.load()]).then(function () {
             document.documentElement.className += " fonts-loaded";
         });
-        var jsAssetsPath = "/dist/assets/";
+        var jsAssetsPath = "/assets/";
     </script>
 
-    <link rel="stylesheet" href="/dist/assets/styles/core.css?ver=1.4.1" media="screen"/>
+    <link rel="stylesheet" href="/assets/styles/core.min.css?ver=1.4.1" media="screen"/>
 
     <!--
     CSS Mustard Cut
@@ -34,13 +34,13 @@
     Edge, Chrome 39+, Opera 26+, Safari 9+, iOS 9+, Android ~5+, Android UCBrowser ~11.8+
     FF 47+
     -->
-    <link rel="stylesheet" id="advanced-stylesheet" href="/dist/assets/styles/advanced.css?ver=1.4.1" media="
+    <link rel="stylesheet" id="advanced-stylesheet" href="/assets/styles/advanced.min.css?ver=1.4.1" media="
         only print,
         only all and (pointer: fine), only all and (pointer: coarse), only all and (pointer: none),
         only all and (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen)
     ">
 
-    <link rel="stylesheet" href="/dist/assets/styles/print.css" media="print"/>
+    <link rel="stylesheet" href="/assets/styles/print.min.css" media="print"/>
 
     <script>
         (function() {
@@ -49,7 +49,7 @@
                 let head = document.querySelector('head');
                 // Add main JS
                 let jsMain = document.createElement('script');
-                jsMain.src = '/dist/assets/js/main.js?ver=1.4.1';
+                jsMain.src = '/assets/js/main.min.js?ver=1.4.1';
                 jsMain.defer = true;
                 head.appendChild(jsMain);
                 // Update classname to show JS is available
@@ -70,33 +70,20 @@
         <header class="global-header">
             <span role="status" aria-live="polite"></span>
             {% block banner %}
-                {{ include('@W3CWebsiteTemplates/components/styles/banner.html.twig') }}
             {% endblock banner %}
             {% block global_nav %}
-                {% embed '@W3CWebsiteTemplates/components/styles/global_nav.html.twig' with {
-                    'navigation': navigation|default([])
-                } %}{% endembed %}
             {% endblock global_nav %}
         </header>
         {% block breadcrumbs %}
-                {% embed '@W3CWebsiteTemplates/components/styles/breadcrumbs.html.twig' with {
-                    'breadcrumbs': page.breadcrumbs is defined ? page.breadcrumbs : {}
-                } %}{% endembed %}
         {% endblock breadcrumbs %}
         <main id="main">
             {% block content %}{% endblock %}
             {% block main %}{% endblock %}
         </main>
         {% block crosslinks %}
-            {% if crosslinks is defined and crosslinks|length > 0 %}
-                {{ include('@W3CWebsiteTemplates/components/styles/crosslinks.html.twig') }}
-            {% endif %}
         {% endblock crosslinks %}
     </div>
     {% block footer %}
-        {% embed '@W3CWebsiteTemplates/components/styles/footer.html.twig' with {
-            'links': footerlinks is defined ? footerlinks : {}
-        } %}{% endembed %}
     {% endblock %}
 </div>
 
