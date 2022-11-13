@@ -12,13 +12,13 @@ button,
 
 	background-color: $link-color;
 	border: solid 2px $link-color;
-	border-radius: rem(24);
+	border-radius: rem(24); 
 	color: $white;
 	display: inline-block;
 	font-size: rem(14);
 	font-weight: $emphasis;
 	line-height: 1.5;
-	outline: 2px solid transparent; /* 1 */
+	outline: 2px solid transparent; /* 1 */  
 	outline-offset: -2px; /* 1 */
 	padding: rem(11) rem(24);
 
