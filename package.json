@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "description": "Static website",
   "main": ".eleventy.js",
-  "config": {
-    "from": "src/assets",
-    "to": "dist/assets"
-  },
   "scripts": {
     "watch:sass": "sass --watch src/assets/styles:dist/assets/styles",
     "build:sass": "sass --quiet --style=compressed src/assets/styles:dist/assets/styles",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
-    "start": "npm-run-all build:sass --parallel watch:*",
+    "build:eleventy": "NODE_ENV=production eleventy",
+    "css:autoprefixer": "postcss dist/assets/styles/*.css --no-map --use autoprefixer -d dist/assets/styles",
+    "start": "npm-run-all build:sass css:autoprefixer --parallel watch:*",
     "build": "npm-run-all build:*"
   },
   "repository": {
@@ -24,7 +21,7 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Pancheliuga/advocatherine.expert_v2/issues"
-  }, 
+  },
   "homepage": "https://github.com/Pancheliuga/advocatherine.expert_v2#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2"
@@ -32,18 +29,13 @@
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
-    "copyfiles": "^2.4.1",
     "fontfaceobserver": "^2.3.0",
-    "imagemin-cli": "^7.0.0",
-    "node-sass": "^8.0.0",
+    "html-minifier": "^4.0.0",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",
     "sass": "^1.56.1",
-    "shx": "^0.3.4",
-    "svgo": "^3.0.1",
-    "watch": "^1.0.2",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0"
   }
