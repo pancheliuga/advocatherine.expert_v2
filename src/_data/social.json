@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "facebook",
+    "url": "https://www.facebook.com/katiazubik",
+    "icon": "facebook.svg"
+  },
+  {
+    "platform": "instagram",
+    "url": "https://www.instagram.com/advokat_pancheliuga/",
+    "icon": "instagram.svg"
+  },
+  {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/in/kateryna-pancheliuga-31747117b/",
+    "icon": "linkedin.svg"
+  },
+  {
+    "platform": "rss",
+    "url": "/feed.xml",
+    "icon": "rss.svg"
+  }
+]
