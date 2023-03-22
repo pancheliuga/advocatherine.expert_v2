@@ -8,7 +8,7 @@
     "dev:11ty": "eleventy --serve",
     "build:11ty": "eleventy",
     "start": "run-p dev:*",
-    "build": "run-s clean build:*"
+    "build": "ELEVENTY_ENV=production run-s clean build:*"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
