@@ -1,21 +1,34 @@
-		<nav id="mainnav" class="header__menu menu" aria-label="Main">
-			<button type="button" class="menu__icon icon-menu"><span></span></button>
-			<div class="menu__body">
-				<ul class="menu__list">
-          {% for item in navigation.top %}
-					    <li>
-                <a
-                  class="nav menu__link"
-                  href="{{ item.url }}"
-                  {{
-                  helpers.getLinkActiveState(item.url,
-                  page.url)
-                  |
-                  safe
-                  }}
-                  >{{ item.text }}</a>
-    </li>
-    {% endfor %}
-				</ul>
-			</div>
-		</nav>
+{% set navPages = collections.all | eleventyNavigation %}
+
+<nav id="mainnav" class="header__menu menu" aria-label="Main">
+	<button type="button" class="menu__icon icon-menu"><span></span></button>
+	<div class="menu__body">
+    {% macro renderNavListItem(entry) %}
+      {% if entry.children.length %}
+        <li class="menu__item dropdown">
+          <details
+            {%- for child in entry.children %}
+              {% if child.parent == entry.title and child.url == page.url %}
+                class="is-active"
+                open
+              {% endif %}
+            {% endfor %}
+          >
+            <summary>{{ entry.title }}</summary>
+            <ul class="dropdown__list" role="list">
+              {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+            </ul>
+          </details>
+        </li>
+      {% else %}
+        <li class="menu__item">
+          <a href="{{ entry.url }}" class="nav menu__link" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+        </li>
+      {%- endif -%}
+    {%- endmacro %}
+
+    <ul class="nav-list menu__list" role="list">
+    {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    </ul>
+  </div>
+</nav>

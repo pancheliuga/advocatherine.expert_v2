@@ -64,3 +64,8 @@ textarea,
 select {
   font: inherit;
 }
+
+:where([role="list"]) {
+  list-style: none;
+  padding-inline-start: 0;
+}

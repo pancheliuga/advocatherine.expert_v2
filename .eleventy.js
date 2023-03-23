@@ -37,6 +37,7 @@ const {slugifyString} = require('./config/utils');
 const {escape} = require('lodash');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 module.exports = eleventyConfig => {
 	// 	--------------------- Custom Watch Targets -----------------------
@@ -96,6 +97,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.setLibrary('md', markdownLib);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(inclusiveLangPlugin);
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
 	// 	--------------------- Passthrough File Copy -----------------------
 	// same path
