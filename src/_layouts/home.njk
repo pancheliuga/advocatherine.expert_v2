@@ -7,6 +7,8 @@ layout: base
 					<div class="first__bg-mob">
             <!-- header -->
             {% include "partials/header.njk" %}
+
+			{% include "partials/hero.njk" %}
             
 						<div class="first__container">
 							<p class="first__mob-link">
@@ -42,7 +44,7 @@ layout: base
 								<div class="first__about-item">
 									<div class="first__item-box">
 										<div class="first__item-icon">
-											<img src="img/icons/01.svg" alt="">
+											<img src="assets/images/icons/01.svg" alt="">
 										</div>
 										<div class="first__item-text">
 											<p class="first__item-top"><span>13</span> років
@@ -55,7 +57,7 @@ layout: base
 								<div class="first__about-item">
 									<div class="first__item-box">
 										<div class="first__item-icon">
-											<img src="img/icons/02.svg" alt="">
+											<img src="assets/images/icons/02.svg" alt="">
 										</div>
 										<div class="first__item-text">
 											<p class="first__item-top"><span>7</span> років
@@ -68,7 +70,7 @@ layout: base
 								<div class="first__about-item">
 									<div class="first__item-box">
 										<div class="first__item-icon">
-											<img src="img/icons/03.svg" alt="">
+											<img src="assets/images/icons/03.svg" alt="">
 										</div>
 										<div class="first__item-text">
 											<p class="first__item-top"><span>5</span> років
@@ -83,138 +85,9 @@ layout: base
 					</div>
 				</div>
 			</article>
-			<article class="sphere">
-				<div class="sphere__container">
-					<h2 class="sphere__title _title">Сфери моєї компетенції
-					</h2>
-					<p class="sphere__sutitle _subtitle">Я можу допомогти у вирішенні наступних питань:
-					</p>
-					<div class="sphere__box">
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/04.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Справи щодо нерухомого майна та землі
-									</p>
-									<p class="sphere__text">суперечки і складнощі з поділом, купівлею-продажем,
-										даруванням, орендою
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/05.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Сімейні спори
-									</p>
-									<p class="sphere__text">розлучення, поділ майна, опіка над дітьми, аліменти
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/06.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Бізнес консалтинг
-									</p>
-									<p class="sphere__text">складання надійних договорів, стягнення шкоди за невиконання
-										умов договорів
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/07.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Справи, що стосуються мобілізації і військових
-									</p>
-									<p class="sphere__text">підстави звільнення від мобілізації, оскарження рішень ВЛК,
-										звільнення зі служби у війську
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/08.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Пенсійні справи
-									</p>
-									<p class="sphere__text">призначення виплат пенсіонерам, відсудження доплат і
-										надбавок чорнобильцям
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/09.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Справи щодо компенсації завданої шкоди
-									</p>
-									<p class="sphere__text">з приводу псування майна (залиття, пошкодження)
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/10.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Проблеми, пов’язані
-										з ДТП
-									</p>
-									<p class="sphere__text">штрафи, стягнення шкоди і спори зі страховими компаніями
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/11.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Трудові спори</p>
-									<p class="sphere__text">звільнення з роботи, неправомірність доган
-										і дисциплінарних стягнень</p>
-								</div>
-							</div>
-						</div>
-						<div class="sphere__item">
-							<div class="sphere__item-box">
-								<div class="sphere__icon">
-									<img src="img/icons/12.svg" alt="">
-								</div>
-								<div class="sphere__content">
-									<p class="sphere__item-title">Ведення справ щодо зняття арештів у виконавчій службі
-									</p>
-									<p class="sphere__text">блокування рахунків, арешт майна (виконання судових рішень)
-										арешт щодо боргових зобов’язань
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
+
+			{% include "partials/sphere.njk" %}
+			
 			<article class="media">
 				<div class="media__container">
 					<h2 class="media__title _title">Я в медіа-просторі
