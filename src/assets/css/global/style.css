@@ -1,5 +1,5 @@
 * {
-  padding: 0px;
+  /* padding: 0px; */
   margin: 0px;
   border: 0px;
 }
@@ -674,6 +674,7 @@ html.menu-open .menu__body {
   transition: all 0.3s ease 0s;
   border-bottom: 10px solid transparent;
   cursor: pointer;
+  position: relative;
 }
 
 .sphere__item:hover {
@@ -719,6 +720,15 @@ html.menu-open .menu__body {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
+}
+
+.sphere__item a:after {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .media {
@@ -1054,10 +1064,20 @@ html.menu-open .menu__body {
   height: auto;
   border-bottom: 10px solid transparent;
   background: #f1f4f4;
+  position: relative;
 }
 
 .blog__slide:hover {
   border-bottom: 10px solid #00373a;
+}
+
+.blog__slide a:after {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .blog__block {

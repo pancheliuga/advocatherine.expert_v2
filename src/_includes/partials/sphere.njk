@@ -5,129 +5,19 @@
 		<p class="sphere__sutitle _subtitle">Я можу допомогти у вирішенні наступних питань:
 		</p>
 		<div class="sphere__box">
+        {% for item in sphere %}
 			<div class="sphere__item">
 				<div class="sphere__item-box">
-                    {% for item in sphere %}
 					<div class="sphere__icon">
 						<img src="assets/images/icons/{{ item.icon}}" alt="">
 					</div>
 					<div class="sphere__content">
-						<p class="sphere__item-title">{{ item.title }}
-						</p>
-						<p class="sphere__text">{{ item.description }}
-						</p>
-					</div>
-                    {% endfor %}
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/05.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Сімейні спори
-						</p>
-						<p class="sphere__text">розлучення, поділ майна, опіка над дітьми, аліменти
-						</p>
+						<a href="{{ item.url | url }}" class="sphere__item-title">{{ item.title }}</a>
+						<p class="sphere__text">{{ item.description }}</p>
 					</div>
 				</div>
 			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/06.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Бізнес консалтинг
-						</p>
-						<p class="sphere__text">складання надійних договорів, стягнення шкоди за невиконання
-							умов договорів
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/07.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Справи, що стосуються мобілізації і військових
-						</p>
-						<p class="sphere__text">підстави звільнення від мобілізації, оскарження рішень ВЛК,
-							звільнення зі служби у війську
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/08.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Пенсійні справи
-						</p>
-						<p class="sphere__text">призначення виплат пенсіонерам, відсудження доплат і
-							надбавок чорнобильцям
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/09.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Справи щодо компенсації завданої шкоди
-						</p>
-						<p class="sphere__text">з приводу псування майна (залиття, пошкодження)
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/10.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Проблеми, пов’язані
-							з ДТП
-						</p>
-						<p class="sphere__text">штрафи, стягнення шкоди і спори зі страховими компаніями
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/11.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Трудові спори</p>
-						<p class="sphere__text">звільнення з роботи, неправомірність доган
-							і дисциплінарних стягнень</p>
-					</div>
-				</div>
-			</div>
-			<div class="sphere__item">
-				<div class="sphere__item-box">
-					<div class="sphere__icon">
-						<img src="assets/images/icons/12.svg" alt="">
-					</div>
-					<div class="sphere__content">
-						<p class="sphere__item-title">Ведення справ щодо зняття арештів у виконавчій службі
-						</p>
-						<p class="sphere__text">блокування рахунків, арешт майна (виконання судових рішень)
-							арешт щодо боргових зобов’язань
-						</p>
-					</div>
-				</div>
-			</div>
+        {% endfor %}
 		</div>
 	</div>
-</article>
+</article> 

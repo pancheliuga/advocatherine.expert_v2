@@ -1,0 +1,40 @@
+<article clas="blog">
+	<div class="blog__container">
+		<h2 class="blog__title _title">Мої дописи
+		</h2>
+		<p class="blog__subtitle _subtitle">Ознайомтеся з кількома цікавими випадками з мого професійного
+			життя</p>
+		<div class="blog__slider-box">
+			<!-- Оболонка слайдера -->
+			<div class="blog__slider swiper" data-showmore="items">
+				<!-- Частина слайдера, що рухається -->
+				<div class="blog__wrapper swiper-wrapper" data-showmore-content="3">
+					<!-- Слайд -->
+                    {% set postslist = collections.posts %} {% for post in postslist | limit(5) %}
+					<div class="blog__slide swiper-slide">
+						<div class="blog__slide-img">
+							<img src="img/04.jpg" alt="">
+						</div>
+						<div class="blog__block">
+							<p class="blog__slider-title">{{ post.data.title }}</p>
+							<p class="blog__slider-text">{{ post.templateContent | excerpt }}</p>
+							<a href="{{ post.url | url }}" class="blog__link">Читати більше <img src="assets/images/icons/orange-arrow.svg" alt=""></a>
+						</div>
+					</div>
+                    {% endfor %}
+				</div>
+				<button hidden data-showmore-button type="button" class="block__more mobile">
+					<span>Більше дописів</span>
+					<span>Приховати</span>
+				</button>
+				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+				<button type="button" class="blogswiper-button-prev">
+					<img src="assets/images/icons/left1.svg" alt="">
+				</button>
+				<button type="button" class="blogswiper-button-next">
+					<img src="assets/images/icons/right1.svg" alt="">
+				</button>
+			</div>
+		</div>
+	</div>
+</article>

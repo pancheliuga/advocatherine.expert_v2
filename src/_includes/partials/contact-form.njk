@@ -1,0 +1,49 @@
+<section id="contact" class="contact" style="background-image:url('assets/images/07.jpg');">
+	<div class="contact__container">
+		<div class="contact__box">
+			<div class="contact__left">
+				<p class="contact__title">Зв’яжіться зі мною
+				</p>
+				<p class="contact__subtitle">Заповніть форму, щоб замовити зворотній дзвінок, або опишіть суть своєї проблеми</p>
+				<div class="contact__box-input">
+					<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ім’я" class="contact__input">
+				</div>
+				<div class="contact__box-input _flex">
+					<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Телефон" class="contact__input">
+					<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="E-mail" class="contact__input">
+				</div>
+				<div class="contact__box-input">
+					<textarea autocomplete="off" name="form[]" placeholder="Повідомлення" data-error="Помилка" class="contact__input"></textarea>
+				</div>
+				<div class="contact__button">
+					<button type="submit" class="button">Відправити</button>
+				</div>
+				<p class="contact__policy">*натискаючи «Відправити», Ви погоджуєтесь
+					з <a href="#!">політикою конфіденційності</a>
+				</p>
+			</div>
+			<div class="contact__right">
+				<p class="contact__title">Контакти
+				</p>
+				<div class="contact__right-box">
+					<p class="contact__text">Телефон</p>
+					<a href="tel:+380971336851" class="contact__link">+38 097 133 68 51
+					</a>
+				</div>
+				<div class="contact__right-box">
+					<p class="contact__text">E-mail</p>
+					<a href="mailto:advocatherine@gmail.com" class="contact__link">advocate.rivne@gmail.com</a>
+				</div>
+				<div class="contact__right-box">
+					<p class="contact__text">Адреса</p>
+					<a href="https://goo.gl/maps/WSqvkUqKB3n" target="_blank" class="contact__link">м. Рівне, вул Паркова, 2</a>
+				</div>
+				<div class="contact__icons" aria-label="Social links">
+                    {% for item in social %}
+					<a href={{ item.url }} rel="me"><img src="assets/images/icons/{{ item.icon }}" alt=""></a>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

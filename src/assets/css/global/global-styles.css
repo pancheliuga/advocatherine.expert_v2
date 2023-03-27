@@ -6,7 +6,7 @@
 */
 body {
   color: var(--color-dark);
-  background: var(--color-light);
+  /* background: var(--color-light); */
   font-size: var(--size-step-1);
   font-family: var(--font-base);
   line-height: 1.4;
@@ -96,10 +96,10 @@ main:focus {
   outline: none;
 }
 
-article [href^='http']:not([href*='eleventy-excellent.netlify.app'])::after {
+article [href^='http']:not([href*='advocatherine.expert'])::after {
   display: inline-block;
   width: 1em;
-  height: 1em;
+  height: 1em; 
   background-image: url('/assets/images/icn-external.svg');
   background-repeat: no-repeat;
   background-position: center;

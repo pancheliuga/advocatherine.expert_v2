@@ -121,6 +121,13 @@ const splitlines = (input, maxCharLength) => {
 	return lines;
 };
 
+// excerpt Filter by Stephanie Eckles
+const excerpt = post => {
+	const content = post.replace(/(<([^>]+)>)/gi, '');
+
+	return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
+};
+
 module.exports = {
 	limit,
 	toHtml,
@@ -132,5 +139,6 @@ module.exports = {
 	minifyCss,
 	minifyJs,
 	mdInline,
-	splitlines
+	splitlines,
+	excerpt
 };
