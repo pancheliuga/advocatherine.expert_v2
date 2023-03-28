@@ -1,7 +1,9 @@
 ---
 title: 'Open Graph images'
-description: 'When you share your blog posts, a thumbnail image appears - the image we define as an Open Graph Image. This starter generates these images for your blog posts automatically.'
 date: 2023-01-25
+tags:
+imgUrl:
+imgAlt:
 ---
 
 When you share your blog posts, a thumbnail image may appear - the image we define in our meta data as an Open Graph Image (`og:image`).
@@ -24,3 +26,5 @@ The fallback and default image for all other pages is the image set as `opengrap
 
 {% endraw %}
 To change the look and behaviour of those images and replace the SVG background edit `src/social-preview.njk`. The implementation is based on [Bernard Nijenhuis article](https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/).
+
+{% imagePlaceholder "./src/assets/images/15.jpg", "Alt... The preview image for social media", "Caption.. An interesting caption." %}

@@ -5,6 +5,7 @@ const markdownLib = require('../plugins/markdown');
 const site = require('../../src/_data/meta');
 const {throwIfNotType} = require('../utils');
 const md = require('markdown-it')();
+const path = require('path');
 
 /** Returns the first `limit` elements of the the given array. */
 const limit = (array, limit) => {
@@ -128,6 +129,15 @@ const excerpt = post => {
 	return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
 };
 
+// modify default image size
+const imgSize = (src, size = '400', format = 'jpeg') => {
+	const extension = path.extname(src);
+	const name = path.basename(src, extension);
+	const dirname = '/assets/images/';
+
+	return `${dirname}${name}-${size}w.${format}`;
+};
+
 module.exports = {
 	limit,
 	toHtml,
@@ -140,5 +150,6 @@ module.exports = {
 	minifyJs,
 	mdInline,
 	splitlines,
-	excerpt
+	excerpt,
+	imgSize
 };

@@ -1,0 +1,13 @@
+<div class="post-card__image">
+  {% if post.data.imgUrl %}
+    <img src="{{ post.data.imgUrl | imgSize }}" alt="{{ post.data.imgAlt }}" loading="lazy" decoding="async">
+  {% else %}
+    <img src="
+      https://source.unsplash.com/collection/2195859/400x222/?sig={{ range(0, 99) | random }}/daily" alt="Random abstract image to fill the card." loading="lazy" decoding="async" width="400" height="222">
+  {% endif %}
+</div>
+<div class="blog__block">
+	<p class="blog__slider-title">{{ post.data.title }}</p>
+	<p class="blog__slider-text">{{ post.templateContent | excerpt }}</p>
+	<a href="{{ post.url | url }}" class="blog__link">Читати більше <img src="assets/images/icons/orange-arrow.svg" alt=""></a>
+</div>

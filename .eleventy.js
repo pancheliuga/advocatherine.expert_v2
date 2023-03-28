@@ -14,7 +14,8 @@ const {
 	minifyJs,
 	mdInline,
 	splitlines,
-	excerpt
+	excerpt,
+	imgSize
 } = require('./config/filters/index.js');
 
 // module import shortcodes
@@ -69,6 +70,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addFilter('md', mdInline);
 	eleventyConfig.addFilter('splitlines', splitlines);
 	eleventyConfig.addFilter('excerpt', excerpt);
+	eleventyConfig.addFilter('imgSize', imgSize);
 	eleventyConfig.addFilter('keys', Object.keys);
 	eleventyConfig.addFilter('values', Object.values);
 	eleventyConfig.addFilter('entries', Object.entries);

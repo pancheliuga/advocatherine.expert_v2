@@ -12,20 +12,12 @@
 					<!-- Слайд -->
                     {% set postslist = collections.posts %} {% for post in postslist | limit(5) %}
 					<div class="blog__slide swiper-slide">
-						<div class="blog__slide-img">
-							<img src="img/04.jpg" alt="">
-						</div>
-						<div class="blog__block">
-							<p class="blog__slider-title">{{ post.data.title }}</p>
-							<p class="blog__slider-text">{{ post.templateContent | excerpt }}</p>
-							<a href="{{ post.url | url }}" class="blog__link">Читати більше <img src="assets/images/icons/orange-arrow.svg" alt=""></a>
-						</div>
+						{% include "partials/blog-card.njk" %}
 					</div>
                     {% endfor %}
 				</div>
 				<button hidden data-showmore-button type="button" class="block__more mobile">
-					<span>Більше дописів</span>
-					<span>Приховати</span>
+                    <a href="/blog/">Більше дописів</a>
 				</button>
 				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
 				<button type="button" class="blogswiper-button-prev">
