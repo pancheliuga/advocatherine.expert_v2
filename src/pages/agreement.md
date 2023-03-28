@@ -2,8 +2,8 @@
 title: Legal notice
 seo:
   title: Legal notice
-permalink: /imprint/index.html
-description: Imprint infos
+permalink: /agreement/index.html
+description: User agreement
 layout: page
 ---
 

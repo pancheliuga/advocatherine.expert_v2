@@ -1,13 +1,5 @@
 module.exports = {
-	top: [
-		{
-			text: 'Головна',
-			url: '/'
-		},
-		{
-			text: 'Послуги',
-			url: '/services/'
-		},
+	main: [
 		{
 			text: 'Вартість',
 			url: '/prices/'
@@ -25,13 +17,51 @@ module.exports = {
 			url: '/blog/'
 		}
 	],
-	bottom: [
+	services: [
 		{
-			text: 'Imprint',
-			url: '/imprint/'
+			text: 'Справи щодо нерухомого майна та землі',
+			url: '/services/real-estate/'
 		},
 		{
-			text: 'Privacy',
+			text: 'Сімейні спори',
+			url: '/services/family-disputes/'
+		},
+		{
+			text: 'Бізнес консалтинг',
+			url: '/services/business-consulting/'
+		},
+		{
+			text: 'Справи, що стосуються мобілізації і військових',
+			url: '/services/mobilization/'
+		},
+		{
+			text: 'Пенсійні справи',
+			url: '/services/pension/'
+		},
+		{
+			text: 'Справи щодо компенсації завданої шкоди',
+			url: '/services/damage-compensation/'
+		},
+		{
+			text: 'Проблеми, пов’язані з ДТП',
+			url: '/services/road-accident/'
+		},
+		{
+			text: 'Трудові спори',
+			url: '/services/labor-disputes/'
+		},
+		{
+			text: 'Ведення справ щодо зняття арештів у виконавчій службі',
+			url: '/services/removal-arrests/'
+		}
+	],
+	policy: [
+		{
+			text: 'Угода користувача',
+			url: '/agreement/'
+		},
+		{
+			text: 'Політика конфіденційності',
 			url: '/privacy/'
 		}
 	]

@@ -1,0 +1,14 @@
+.external-link::after {
+    display: inline-block;
+    width: 1em;
+    height: 1em; 
+    background-image: url('/assets/images/icn-external.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% auto;
+    /* alternative text rules */
+    content: '(external link)';
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 1em; /* the width of the icon */
+  }

@@ -1,31 +1,47 @@
 {% set activePage = page.url | url %}
 
-<footer class="site-foot" role="contentinfo">
-  <div class="wrapper">
-    <div class="site-foot__inner">
-      <nav id="footernav" class="site-foot__inner" aria-label="Footer">
-
-        &copy; {% year %} <a href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>{{ meta.siteName }} <small>{% packageVersion %}</small> </a>
-
-        {% for item in navigation.bottom %}
-
-        <a
-          href="{{ item.url }}"
-          {{
-          helpers.getLinkActiveState(item.url,
-          page.url)
-          |
-          safe
-          }}
-          >{{ item.text }}</a
-        >
-
-        {% endfor %}
-      </nav>
-    </div>
-  </div>
-
-  <!-- lang menu -->
-</footer>
+<footer class="footer" role="contentinfo">
+			<div class="footer__container">
+				<div class="footer__item">
+					<a href="/" {% if activePage === '/' %} aria-current="page" {% endif %}><img src="assets/images/icons/logo_header.svg" alt="Logo" class="footer__logo"></a>
+				</div>
+				<div class="footer__item">
+					<a href="/" {% if activePage === '/' %} aria-current="page" {% endif %} class="footer__title">Головна</a>
+					<ul class="footer__list" role="list">
+            {% for item in navigation.main %}
+						<li class="footer__list-item"><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url)
+          | safe }}>{{ item.text }}</a></li>
+            {% endfor %}
+					</ul>
+				</div>
+				<div class="footer__item">
+					<p class="footer__title">Послуги</p>
+					<ul class="footer__list" role="list">
+            {% for item in navigation.services %}
+						<li class="footer__list-item"><a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url)
+          | safe }}>{{ item.text }}</a></li>
+              {% endfor %}
+					</ul>
+				</div>
+				<div class="footer__item">
+          {% for item in navigation.policy %}
+					<a href="{{ item.url }}" class="footer__link">{{ item.text }}</a>
+					{% endfor %}
+					<ul class="footer__list" role="list">
+						<li class="footer__list-item">
+							&copy; 2016 - {% year %} {{ meta.siteDescription }}
+						</li>
+						<li class="footer__list-item"><a href="mailto:advocate.rivne@gmail.com">advocate.rivne@gmail.com</a>
+						</li>
+						<li class="footer__list-item"><a href="tel:+380971336851">+38 097 133 68 51</a></li>
+					</ul>
+					<ul class="footer__icons" role="list">
+          {% for item in social %}
+					<li><a href={{ item.url }} rel="me"><img src="assets/images/icons/{{ item.icon }}" alt="social icon"></a></li>
+          {% endfor %}
+					</ul>
+				</div>
+			</div>
+		</footer>
 
 
