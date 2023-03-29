@@ -40,7 +40,9 @@
 				</div>
 				<div class="contact__icons" aria-label="Social links">
                     {% for item in social %}
-					<a href={{ item.url }} rel="me"><img src="assets/images/icons/{{ item.iconWhite }}" alt=""></a>
+					<a href={{ item.url }} rel="me">
+						<div aria-hidden="true">{% include 'svg/' + item.iconWhite %}</div>	
+					</a>
                     {% endfor %}
 				</div>
 			</div>

@@ -3,7 +3,9 @@
 <footer class="footer" role="contentinfo">
 			<div class="footer__container">
 				<div class="footer__item">
-					<a href="/" {% if activePage === '/' %} aria-current="page" {% endif %}><img src="assets/images/icons/logo_header.svg" alt="Logo" class="footer__logo"></a>
+					<a class="brand" href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>
+						{% include "svg/logo.svg" %}
+					</a>
 				</div>
 				<div class="footer__item">
 					<a href="/" {% if activePage === '/' %} aria-current="page" {% endif %} class="footer__title">Головна</a>
@@ -35,9 +37,13 @@
 						</li>
 						<li class="footer__list-item"><a href="tel:+380971336851">+38 097 133 68 51</a></li>
 					</ul>
-					<ul class="footer__icons" role="list">
+					<ul class="footer__icons" role="list" aria-label="Social links">
           {% for item in social %}
-					<li><a href={{ item.url }} rel="me"><img src="assets/images/icons/{{ item.icon }}" alt="social icon"></a></li>
+					<li>
+						<a href="{{ item.url }}" rel="me">
+							<div aria-hidden="true">{% include 'svg/' + item.icon %}</div>
+						</a>
+					</li>
           {% endfor %}
 					</ul>
 				</div>
