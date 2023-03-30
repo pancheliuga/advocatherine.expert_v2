@@ -455,6 +455,46 @@ html.menu-open .menu__body {
   height: auto;
 }
 
+.pagination__box {
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+
+.pagination-trail {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination-page {
+  min-width: 32px;
+  aspect-ratio: 1;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pill {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background-color: #00373A;
+  color: white;
+  /* border: 1px solid #00373A; */
+}
+
+a.pill {
+  --color-focus-bg: white;
+  --outline-color: white;
+  --outline-offset: 0.1875rem;
+}
+
+a.pill:is(:focus, :hover, [aria-current="page"]) {
+    background-color: #F1F4F4;
+    color: #00373A;
+}
+
 .first {
   position: relative;
 }
@@ -800,11 +840,13 @@ html.menu-open .menu__body {
 }
 
 .contact {
+  background-image: url('../images/07.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding-top: 80px;
   padding-bottom: 80px;
+  margin-bottom: -1px;
 }
 
 .contact__box {
@@ -1081,19 +1123,9 @@ html.menu-open .menu__body {
   transition: all 0.3s ease 0s;
 }
 
-.blog__slide-img {
-  position: relative;
-  height: 235px;
-}
-
-.blog__slide-img img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+.blog__block svg {
+  width: 16px;
+  height: auto;
 }
 
 .blog__slider-title {
@@ -1141,16 +1173,15 @@ html.menu-open .menu__body {
   right: -60px;
 }
 
-.blogpage__container {
+.page-header__container {
   padding-top: 80px;
-  padding-bottom: 80px;
 }
 
-.blogpage__title {
+.page-header__title {
   margin-bottom: 30px;
 }
 
-.blogpage__text {
+.page-header__text {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 50px;
@@ -2055,6 +2086,11 @@ html.menu-open .menu__body {
     max-width: none;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+
+  .pagination__box {
+    margin-top: 15px;
+    margin-bottom: 50px;
   }
 
   .brand svg {

@@ -1,0 +1,11 @@
+<div class="blogpage__container" id="post-list">
+	<div class="blogpage__box-showmore">
+		<ul class="blogpage__box" role="list">
+            {% for post in postslist %}
+                <li class="blogpage__item">
+                {% include "partials/blog-card.njk" %}
+                </li>
+            {% endfor %}
+		</ul>
+	</div>
+</div>
