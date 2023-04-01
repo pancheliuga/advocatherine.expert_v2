@@ -1,5 +1,10 @@
-<div class="page-header__container">
-	<h1 class="page-header__title _title-main">{{ title }}<br>{{ subtitle }}
-	</h1>
-	<p class="page-header__text">{{ description }}</p>
+<div class="page-header">
+	<div class="wrapper flow prose">
+		<h1>{{ pageHeaderTitle }}</h1>
+		{% if pageHeaderSummary %}
+    	<div class="page-header__text">
+    	{{ pageHeaderSummary | safe }}
+    	</div>
+    	{% endif %}
+	</div>
 </div>

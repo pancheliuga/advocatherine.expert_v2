@@ -1,7 +1,6 @@
 ---
 title: 'Post with fetched content'
 date: 2022-08-28
-tags: ['Culture', 'Design Thinking']
 ---
 
 [Eleventy Fetch](https://www.11ty.dev/docs/plugins/fetch/) fetches and caches resources - at configurable intervals.

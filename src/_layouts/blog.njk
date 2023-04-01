@@ -10,12 +10,10 @@ layout: base
 {% set postslist =collections[tag] %} 
 {% set pageHeaderTitle = 'Дописи в блозі асоційовані з “' + tag + '”' %} 
 {% endif %} 
-<article class="blogpage">
   {% include "partials/header.njk" %}
   {% include "partials/page-header.njk" %} 
   {% include "partials/post-list.njk" %} 
   {% if not tag %} 
   {% include "partials/pagination.njk"%} 
   {% endif %}
-</article>
 {% include "partials/contact-form.njk" %}

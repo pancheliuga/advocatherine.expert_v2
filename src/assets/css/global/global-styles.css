@@ -23,15 +23,15 @@ h3 {
 }
 
 h1 {
-  font-size: var(--size-step-5);
-}
-
-h2 {
   font-size: var(--size-step-4);
 }
 
-h3 {
+h2 {
   font-size: var(--size-step-3);
+}
+
+h3 {
+  font-size: var(--size-step-2);
 }
 
 /* Set line lengths */
@@ -41,11 +41,11 @@ blockquote:not([class]) {
   max-width: 50ch;
 }
 
-/* h1,
+h1,
 h2,
 h3 {
-  max-width: 20ch;
-} */
+  max-width: 25ch;
+}
 
 blockquote {
   border-inline-start: 0.8rem solid var(--color-primary);

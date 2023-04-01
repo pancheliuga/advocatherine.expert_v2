@@ -23,9 +23,6 @@ module.exports = {
 		name: 'Блог Адвоката Катерини Панчелюги',
 		description: 'Мої дописи, публікації та статті на правову тематику'
 	},
-	pagination: {
-		itemsPerPage: 20
-	},
 	address: {
 		// edit all presets or leave empty. They are being used in the pages for privacy.md and imprint.md
 		firma: 'Адвокат Панчелюга Катерина Миколаївна',
@@ -41,5 +38,9 @@ module.exports = {
 	},
 	menu: {
 		closedText: 'Menu'
+	},
+	banner: {
+		title: 'Розлученя під час війни',
+		url: '/blog/rozluchennya-pid-chas-voyennogo-stanu-chi-mozhlivo-ta-chi-yakosь-vidriznyayetьsya-vid-mirnogo-chasu/'
 	}
 };

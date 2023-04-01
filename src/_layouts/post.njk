@@ -1,19 +1,39 @@
 ---
 layout: base
 schema: blog
-preloads:
-  href: '/assets/fonts/robotomono/robotomono-variablefont_wght-webfont.woff2'
-  as: 'font'
-  type: 'font/woff2'
-  crossorigin: true
 ---
 
-<article class="region blog">
+{% set pageHeaderTitle = title %} 
+{# Grab other posts that aren’t this one for the 'more from the blog' feed #} 
+{% set recommendedPosts = helpers.getSiblingContent(collections.posts, page) %}
+{# Render post date and any tags that this post has been filed under #} 
+{% set pageHeaderSummary %}
+{% set definedDate = date %} 
+{% include "partials/date.njk" %}
+{% if tags %}
+<p class="visually-hidden" id="tags-desc">Теги асоційовані зі статтею.</p>
+<ul class="blogpage__hashtag" aria-describedby="tags-desc" role='list'>
+  {% for tag in tags %}
+  <li>
+    <a href="/tag/{{ tag | slugify }}/">#{{ tag | title | replace(' ', '') }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endset %}
+{% include "partials/header.njk" %}
+<article class=''>
   <div class="wrapper flow prose">
-    <h1 class="gradient-text">{{ title }}</h1>
-
-    {% set definedDate = date %} {% include "partials/date.njk" %}
-
+    {% include "partials/page-header.njk" %}
     {{ content | safe }}
   </div>
+  {% if recommendedPosts %}
+  <footer class="recommended-posts">
+    {% set postslist = recommendedPosts %} {% set postListHeadline = 'Більше
+    статтей' %} 
+    {% include "partials/post-list.njk" %}
+  </footer>
+  {% endif %}
 </article>
+
+{% include "partials/contact-form.njk" %}

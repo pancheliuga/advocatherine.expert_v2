@@ -1,0 +1,5 @@
+.page-header {
+    padding-top: var(--region-space-top, var(--space-l-xl));
+    padding-bottom: var(--region-space-bottom, var(--space-l-xl));
+    color: var(--color-primary);
+  }

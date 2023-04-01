@@ -1,5 +1,5 @@
 * {
-  /* padding: 0px; */
+  padding: 0px;
   margin: 0px;
   border: 0px;
 }
@@ -55,15 +55,6 @@ img {
   vertical-align: top;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
 
 .lock body {
   overflow: hidden;
@@ -100,7 +91,6 @@ h6 {
 .site-wrap > * {
   min-width: 0;
 }
-
 
 
 [class*=__container] {
@@ -151,6 +141,7 @@ a {
   text-align: center;
   color: #00373a;
   margin-bottom: 10px;
+  margin: 0 auto;
 }
 
 ._subtitle {
@@ -272,6 +263,7 @@ a {
   display: flex;
   text-align: center;
   gap: 9px;
+  align-items: center;
 }
 
 .banner__top-call svg {
@@ -1173,10 +1165,6 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
   right: -60px;
 }
 
-.page-header__container {
-  padding-top: 80px;
-}
-
 .page-header__title {
   margin-bottom: 30px;
 }
@@ -1232,6 +1220,7 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
 }
 
 .blogpage__date {
+  display: block;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -1243,6 +1232,10 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
   text-decoration: underline;
   font-weight: bold;
   margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .blogpage__content {
@@ -1912,6 +1905,7 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
     display: none;
   }
 
+
   .menu__body {
     position: fixed;
     width: 100%;
@@ -2469,14 +2463,6 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-  }
-
-  .blogpage__date {
-    text-align: center;
-  }
-
-  .blogpage__hashtag {
-    text-align: center;
   }
 
   .blogpage__article-top {
