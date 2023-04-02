@@ -11,9 +11,11 @@ layout: base
 {% set pageHeaderTitle = 'Дописи в блозі асоційовані з “' + tag + '”' %} 
 {% endif %} 
   {% include "partials/header.njk" %}
+<article class="blogpage region">
   {% include "partials/page-header.njk" %} 
   {% include "partials/post-list.njk" %} 
   {% if not tag %} 
   {% include "partials/pagination.njk"%} 
   {% endif %}
+</article>
 {% include "partials/contact-form.njk" %}

@@ -27,13 +27,13 @@
     },
     {
       "name": "Step 4",
-      "min": 33,
-      "max": 80
+      "min": 38,
+      "max": 60
     },
     {
       "name": "Step 5",
       "min": 40,
-      "max": 113
+      "max": 90
     },
     {
       "name": "Step 6",
