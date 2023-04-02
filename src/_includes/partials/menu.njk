@@ -6,29 +6,24 @@
     {% macro renderNavListItem(entry) %}
       {% if entry.children.length %}
         <li class="menu__item dropdown">
-          <details
-            {%- for child in entry.children %}
-              {% if child.parent == entry.title and child.url == page.url %}
-                class="is-active"
-                open
-              {% endif %}
+          <details>
+            {% for child in entry.children %}
             {% endfor %}
-          >
             <summary>{{ entry.title }}</summary>
             <ul class="dropdown__list" role="list">
-              {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+              {% for child in entry.children %}{{ renderNavListItem(child) }}{% endfor %}
             </ul>
           </details>
         </li>
       {% else %}
         <li class="menu__item">
-          <a href="{{ entry.url }}" class="nav menu__link" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+          <a href="{{ entry.url }}" class="menu__link" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
         </li>
-      {%- endif -%}
-    {%- endmacro %}
+      {% endif %}
+    {% endmacro %}
 
     <ul class="nav-list menu__list" role="list">
-    {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    {% for entry in navPages %}{{ renderNavListItem(entry) }}{% endfor %}
     </ul>
   </div>
 </nav>

@@ -2,9 +2,19 @@
 layout: base
 ---
 
+{% set pageHeaderTitle = title %} 
+
+{% include "partials/header.njk" %}
+
 <article class="region">
   <div class="wrapper flow prose">
-    <h1 class="gradient-text">{{ title }}</h1>
+    {% include "partials/page-header.njk" %}
     {{ content | safe }}
   </div>
 </article>
+
+{% include "partials/contact-form.njk" %}
+
+{% include "partials/recent-posts.njk" %}
+
+ 

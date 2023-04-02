@@ -18,10 +18,6 @@ body {
 }
 
 body {
-  color: #252525;
-  line-height: 1;
-  font-family: "Inter";
-  font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -330,15 +326,6 @@ a {
 
 .menu__input {
   display: none;
-}
-
-.nav-list summary {
-  cursor: pointer;
-  border-bottom: 1px solid transparent;
-}
-
-.nav-list summary:hover {
-  border-bottom: 1px solid #252525;
 }
 
 .dropdown {
@@ -1169,13 +1156,6 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
   margin-bottom: 30px;
 }
 
-.page-header__text {
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 50px;
-  color: #000000;
-}
-
 .blogpage__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1220,18 +1200,13 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
 }
 
 .blogpage__date {
-  display: block;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 20px;
   color: #c5846b;
 }
 
 .blogpage__hashtag {
   text-decoration: underline;
   font-weight: bold;
-  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
