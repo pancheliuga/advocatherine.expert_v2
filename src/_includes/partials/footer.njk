@@ -1,7 +1,7 @@
 {% set activePage = page.url | url %}
 
 <footer class="footer region" role="contentinfo">
-			<div class="footer__container">
+			<div class="footer__container wrapper">
 				<div class="footer__item">
 					<a class="brand" href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>
 						{% include "svg/logo.svg" %}

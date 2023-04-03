@@ -1,5 +1,5 @@
 <article class="media region">
-	<div class="media__container">
+	<div class="media__container wrapper">
 		<h2 class="media__title _title">Я в медіа-просторі</h2>
 		<p class="media__subtitle _subtitle">Перегляньте відео моїх консультацій на телеканалі «Рівне 1»</p>
 		<div class="media__slider-box">
@@ -10,9 +10,7 @@
                     <!-- Слайд -->
                     {% for item in media %}  
 					<div class="media__slide swiper-slide">
-						<div class="media__slide-img">
-							{% youtube item.videoid, item.label %}
-						</div>
+						{% youtube item.videoid, item.label %}
 						<p class="media__slider-title">{{ item.title }}</p>
 						<p class="media__slider-text">Ефір від {{ item.date }}</p>
 					</div>
