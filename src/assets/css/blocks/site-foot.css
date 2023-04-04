@@ -61,7 +61,7 @@
 }
 
 .footer__icons svg {
-  width: 36px;
+  width: 43px;
   height: auto;
 }
 
@@ -93,11 +93,10 @@
 
   .footer__icons {
     justify-content: unset;
-    gap: 25px;
   }
 
   .footer__icons svg {
-    width: 43px;
+    width: 36px;
     height: auto;
   }
 }

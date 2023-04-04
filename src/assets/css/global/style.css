@@ -1,6 +1,4 @@
 * {
-  padding: 0px;
-  margin: 0px;
   border: 0px;
 }
 
@@ -197,7 +195,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  padding: 16px 0px;
 }
 
 .banner__top-item {
@@ -634,7 +631,8 @@ padding: var(--space-m-l);
 
 .media__slider-title {
   font-weight: 600;
-  margin-bottom: var(--size-step-0);
+  margin-top: var(--space-s-m);
+  margin-bottom: var(--space-s-m);
   color: #00373a;
 }
 
@@ -818,7 +816,7 @@ padding: var(--space-m-l);
 }
 
 .contact__icons svg {
-  width: 36px;
+  width: 43px;
   height: auto;
 }
 
@@ -944,6 +942,7 @@ padding: var(--space-m-l);
 }
 
 .blog__slider-text {
+  font-size: 16px;
   font-weight: 300;
   margin-bottom: 22px;
 }
@@ -1882,7 +1881,7 @@ padding: var(--space-m-l);
     display: block;
   }
 
-    .first__bg {
+  .first__bg {
     background-image: none;
     background-position: center center;
     z-index: 1;
@@ -2014,7 +2013,7 @@ padding: var(--space-m-l);
   .media__wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 25px;
+    gap: var(--space-m-l);
   }
 
   .media__slide {
@@ -2088,11 +2087,6 @@ padding: var(--space-m-l);
         -ms-flex-pack: center;
             justify-content: center;
     gap: 20px;
-  }
-
-  .contact__icons svg {
-    width: 43px;
-    height: auto;
   }
 
   .contact__map-box {
