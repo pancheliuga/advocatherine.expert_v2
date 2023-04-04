@@ -11,6 +11,11 @@
       "max": 20
     },
     {
+      "name": "Step 01",
+      "min": 18,
+      "max": 22
+    },
+    {
       "name": "Step 1",
       "min": 19,
       "max": 26
@@ -29,6 +34,11 @@
       "name": "Step 4",
       "min": 38,
       "max": 60
+    },
+    {
+      "name": "Step 45",
+      "min": 50,
+      "max": 80
     },
     {
       "name": "Step 5",
