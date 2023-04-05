@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+{% include "partials/header.njk" %}
+
+<article class="price region">
+  <div class="wrapper flow">
+    <h1 class="page-header">{{ title }}</h1>
+    {{ content | safe }}
+    {% include "partials/price-table.njk" %}
+  </div>
+</article>
+
+{% include "partials/contact-form.njk" %}
+
+{% include "partials/recent-posts.njk" %}

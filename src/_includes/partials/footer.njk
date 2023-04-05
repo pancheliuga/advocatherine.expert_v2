@@ -1,6 +1,7 @@
 {% set activePage = page.url | url %}
 
-<footer class="footer wrapper region" role="contentinfo">
+<footer class="footer wrapper" role="contentinfo">
+	<div class="footer__box region">
 	<div class="footer__logo">
 		<a class="brand" href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>
 			{% include "svg/logo.svg" %}
@@ -63,4 +64,5 @@
 	    </ul>
 	  </li>
 	</ul>
+	</div>
 </footer>

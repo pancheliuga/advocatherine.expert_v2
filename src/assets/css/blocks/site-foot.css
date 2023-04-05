@@ -3,8 +3,11 @@
   --wrapper-max-width: 90rem;
   display: flex;
   flex-flow: row wrap;
-  border-top: 1px solid #00373A;
   text-align: center;
+}
+
+.footer__box {
+  border-top: 1px solid #00373A;
 }
 
 .footer > * {

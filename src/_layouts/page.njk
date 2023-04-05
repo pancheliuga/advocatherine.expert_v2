@@ -2,10 +2,11 @@
 layout: base
 ---
 
+{% include "partials/header.njk" %}
+
 <article class="region">
   <div class="wrapper flow prose">
     <h1 class="page-header">{{ title }}</h1>
     {{ content | safe }}
   </div>
 </article>
-

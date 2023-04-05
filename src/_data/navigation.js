@@ -2,7 +2,7 @@ module.exports = {
 	main: [
 		{
 			text: 'Вартість',
-			url: '/prices/'
+			url: '/pricing/'
 		},
 		{
 			text: 'Про себе',

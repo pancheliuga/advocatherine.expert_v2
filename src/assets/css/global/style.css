@@ -403,6 +403,10 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
   display: none;
 }
 
+.first__motto {
+  font-size: var(--size-step-5);
+}
+
 .first__cta > * {
   margin-top: var(--space-l-xl);
 }
@@ -1091,8 +1095,6 @@ padding: var(--space-m-l);
 }
 
 .price {
-  padding-top: 70px;
-  padding-bottom: 70px;
 }
 
 .price__title {
@@ -1104,11 +1106,10 @@ padding: var(--space-m-l);
 }
 
 .price__subtitle {
+  color: var(--color-dark);
+  font-family: var(--font-base);
   font-weight: 600;
-  font-size: 18px;
-  line-height: 150%;
-  margin-bottom: 17px;
-  color: #000000;
+  font-size: var(--size-step-1);
 }
 
 .price__list-number {
@@ -1144,10 +1145,6 @@ padding: var(--space-m-l);
   left: 0;
 }
 
-.price__box {
-  margin-bottom: 50px;
-}
-
 .price__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1156,8 +1153,6 @@ padding: var(--space-m-l);
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
   color: #ffffff;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1172,8 +1167,8 @@ padding: var(--space-m-l);
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
   background: #16474a;
-  padding: 46px 35px;
   cursor: auto;
+  padding: var(--space-l-xl);
 }
 
 .price__item-left svg {
@@ -1198,16 +1193,18 @@ padding: var(--space-m-l);
 
 .price__item-title {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
   margin-bottom: 7px;
   text-align: left;
 }
 
+.price__item-footnote {
+  font-style: italic;
+  text-align: left;
+  font-size: 16px;
+}
+
 .price__item-text {
   font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 60%;
           flex: 0 1 60%;
@@ -1219,8 +1216,7 @@ padding: var(--space-m-l);
       -ms-flex: 0 1 65%;
           flex: 0 1 65%;
   background: #16474a;
-  padding: 46px 35px;
-  padding-bottom: 15px;
+  padding: var(--space-l-xl);
   border-bottom: 1px solid #ffffff;
 }
 
@@ -1240,31 +1236,16 @@ padding: var(--space-m-l);
 
 .price__right-text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 48%;
-          flex: 0 1 48%;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
 }
 
 .price__right-cost {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 48%;
-          flex: 0 1 48%;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
   text-align: right;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.price__bottom-text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 150%;
-  color: #000000;
-  max-width: 739px;
-  margin-bottom: 30px;
-}
-
-.price__bottom-text:first-child {
-  margin-bottom: 0;
 }
 
 .myself {
@@ -2204,7 +2185,6 @@ padding: var(--space-m-l);
         -ms-flex-align: center;
             align-items: center;
     gap: 30px;
-    padding-bottom: 25px;
     border-bottom: 1px solid #ffffff;
     cursor: pointer;
   }
@@ -2225,6 +2205,7 @@ padding: var(--space-m-l);
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     border-bottom: none;
+    padding-top: 0;
   }
 
   .price .price__item-spoller {
