@@ -1,16 +1,16 @@
 
-.footer {
+footer {
   --wrapper-max-width: 90rem;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
 }
 
 .footer__box {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
   border-top: 1px solid #00373A;
 }
 
-.footer > * {
+.footer__box > * {
   flex:  1 100%;
 }
 
@@ -70,7 +70,7 @@
 
 @media screen and (min-width: 47.99875em) {
 
-  .footer {
+  .footer__box {
     text-align: unset;
   }
 
