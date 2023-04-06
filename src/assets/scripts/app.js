@@ -4070,8 +4070,8 @@
 					}
 				});
 		};
-		if (document.querySelector('.education__slider'))
-			new core('.education__slider', {
+		if (document.querySelector('.certifications__slider'))
+			new core('.certifications__slider', {
 				modules: [Navigation],
 				observer: true,
 				observeParents: true,
@@ -4080,8 +4080,8 @@
 				speed: 800,
 				loop: true,
 				navigation: {
-					prevEl: '.educationswiper-button-prev',
-					nextEl: '.educationswiper-button-next'
+					prevEl: '.certificationsswiper-button-prev',
+					nextEl: '.certificationsswiper-button-next'
 				},
 				breakpoints: {
 					320: {

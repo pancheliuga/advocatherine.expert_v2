@@ -41,14 +41,9 @@ a {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
-}
-
 img {
   vertical-align: top;
 }
-
 
 .lock body {
   overflow: hidden;
@@ -117,6 +112,12 @@ img {
      object-fit: contain;
 }
 
+[class*=-button-prev] svg,
+[class*=-button-next] svg {
+  width: 40px;
+  height: auto;
+}
+
 p,
 a {
   display: block;
@@ -124,6 +125,7 @@ a {
 
 ._title {
   text-align: center;
+  margin: 0 auto;
 }
 
 ._subtitle {
@@ -973,12 +975,6 @@ padding: var(--space-m-l);
           transform: translate(0, -50%);
 }
 
-.blogswiper-button-next svg,
-.blogswiper-button-prev svg {
-  width: 40px;
-  height: auto;
-}
-
 .blogswiper-button-prev {
   left: -60px;
 }
@@ -1295,27 +1291,14 @@ padding: var(--space-m-l);
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 30px;
+  padding-left: var(--gutter);
+  padding-top: var(--flow-space,1em);
 }
 
 .myself__list li {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 48%;
           flex: 0 1 48%;
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.myself__list li::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #000000;
-  border-radius: 50%;
-  top: 8px;
-  left: 0;
 }
 
 .myself__box-img {
@@ -1329,90 +1312,54 @@ padding: var(--space-m-l);
 }
 
 .special {
-  padding-top: 65px;
-  padding-bottom: 65px;
   background: #00373a;
+  color: var(--color-light-glare);
 }
 
 .special__title {
-  font-family: "Forum";
-  font-size: 50px;
-  line-height: 55px;
-  margin-bottom: 48px;
   color: #ffffff;
-  text-align: center;
+  margin-bottom: var(--space-l-xl);
 }
 
 .special__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 0;
 }
 
 .special__list li {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 150%;
-  color: #ffffff;
-  margin-bottom: 30px;
-  position: relative;
-  padding-left: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 31%;
-          flex: 0 1 31%;
+  display: grid;
+  grid-template-columns: 0 1fr;
+  gap: 1.75em;
+  align-items: start;
 }
 
 .special__list li::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 8px;
-  left: 0;
+  content: "•";
 }
 
-.education {
+.certifications {
   padding-top: 70px;
   padding-bottom: 30px;
 }
 
-.education__title {
-  font-family: "Forum";
-  font-size: 50px;
-  line-height: 55px;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  color: #00373a;
-  max-width: 776px;
-}
-
-.education__slider-box {
+.certifications__slider-box {
   position: relative;
-  margin-bottom: 80px;
+  margin-top: var(--space-l-xl)
 }
 
-.education__slider {
+.certifications__slider {
   -ms-touch-action: pan-y;
       touch-action: pan-y;
 }
 
-.education__slide-img {
+.certifications__slide-img {
   text-align: center;
 }
 
-.education__slide-img img {
+.certifications__slide-img img {
   max-width: 100%;
 }
 
-.education__text {
+.certifications__text {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
@@ -1422,16 +1369,16 @@ padding: var(--space-m-l);
   margin-bottom: 15px;
 }
 
-.education__text span {
+.certifications__text span {
   font-weight: 600;
 }
 
-.education__text.bold {
+.certifications__text.bold {
   font-weight: 600;
 }
 
-.educationswiper-button-prev,
-.educationswiper-button-next {
+.certificationsswiper-button-prev,
+.certificationsswiper-button-next {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -1439,11 +1386,11 @@ padding: var(--space-m-l);
           transform: translate(0, -50%);
 }
 
-.educationswiper-button-next {
+.certificationsswiper-button-next {
   right: -60px;
 }
 
-.educationswiper-button-prev {
+.certificationsswiper-button-prev {
   left: -60px;
 }
 
@@ -1801,12 +1748,6 @@ padding: var(--space-m-l);
 
   .myself__title._title {
     text-align: center;
-  }
-
-  .special__list li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 48%;
-            flex: 0 1 48%;
   }
 
   .emeriture__title._title {
@@ -2220,26 +2161,20 @@ padding: var(--space-m-l);
             flex: 1 1 100%;
   }
 
-  .special__list li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-
-  .education__slider-box {
+  .certifications__slider-box {
     margin-bottom: 120px;
   }
 
-  .educationswiper-button-prev,
-  .educationswiper-button-next {
+  .certificationsswiper-button-prev,
+  .certificationsswiper-button-next {
     top: 110%;
   }
 
-  .educationswiper-button-next {
+  .certificationsswiper-button-next {
     right: 10px;
   }
 
-  .educationswiper-button-prev {
+  .certificationsswiper-button-prev {
     left: 10px;
   }
 

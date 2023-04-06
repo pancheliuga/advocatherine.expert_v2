@@ -21,6 +21,7 @@ h3 {
   letter-spacing: var(--tracking-s);
   font-family: var(--font-display);
   color: var(--color-primary);
+  font-weight: 400;
 }
 
 h1 {
@@ -42,11 +43,11 @@ blockquote:not([class]) {
   max-width: 50ch;
 } */
 
-/* h1,
+h1,
 h2,
 h3 {
   max-width: 25ch;
-} */
+}
 
 blockquote {
   border-inline-start: 0.8rem solid var(--color-primary);
