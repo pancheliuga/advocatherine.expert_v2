@@ -8,36 +8,13 @@
 				<!-- Частина слайдера, що рухається -->
 				<div class="certifications__wrapper swiper-wrapper">
 					<!-- Слайд -->
+                    {% for item in certificates %}
 					<div class="certifications__slide swiper-slide">
 						<div class="certifications__slide-img">
-							<img src="../assets/images/12.jpg" alt="">
+							<img src="../assets/images/certificates/{{ item.title }}" alt="{{ item.alt}}">
 						</div>
 					</div>
-					<div class="certifications__slide swiper-slide">
-						<div class="certifications__slide-img">
-							<img src="../assets/images/13.jpg" alt="">
-						</div>
-					</div>
-					<div class="certifications__slide swiper-slide">
-						<div class="certifications__slide-img">
-							<img src="../assets/images/14.jpg" alt="">
-						</div>
-					</div>
-					<div class="certifications__slide swiper-slide">
-						<div class="certifications__slide-img">
-							<img src="../assets/images/12.jpg" alt="">
-						</div>
-					</div>
-					<div class="certifications__slide swiper-slide">
-						<div class="certifications__slide-img">
-							<img src="../assets/images/13.jpg" alt="">
-						</div>
-					</div>
-					<div class="certifications__slide swiper-slide">
-						<div class="certifications__slide-img">
-							<img src="../assets/images/14.jpg" alt="">
-						</div>
-					</div>
+                    {% endfor %}
 				</div>
 				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
 				<button type="button" class="certificationsswiper-button-prev">

@@ -1,16 +1,5 @@
-<div class="blogpage__container" id="post-list">
-	<div class="blogpage__box-showmore">
-    {% if postListHeadline %}
-    <h2 class="blogpage__title _title-main">
-      {{ postListHeadline }}
-    </h2>
-    {% endif %}
-		<ul class="grid" role="list" data-rows="max-content">
-            {% for post in postslist %}
-                <li class="blogpage__item">
-                {% include "partials/blog-card.njk" %}
-                </li>
-            {% endfor %}
-		</ul>
-	</div>
+<div class="grid mt-l-xl" id="post-list">
+    {% for post in postslist %}
+        {% include "partials/blog-card.njk" %}
+    {% endfor %}
 </div>

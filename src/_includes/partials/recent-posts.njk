@@ -12,7 +12,9 @@
 					<!-- Слайд -->
                     {% set postslist = collections.posts %} {% for post in postslist | limit(5) %}
 					<div class="blog__slide swiper-slide">
+						<div class="blog__block">
 						{% include "partials/blog-card.njk" %}
+						</div>
 					</div>
                     {% endfor %}
 				</div>

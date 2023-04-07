@@ -1,0 +1,11 @@
+.sphere {
+    --grid-min-item-size:12rem;
+    --gutter: var(--space-xl);
+}
+
+@media (min-width: 50em) {
+    .sphere {
+        --grid-min-item-size:18rem;
+        --gutter: var(--space-m-l);
+    }
+}

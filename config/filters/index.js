@@ -126,11 +126,11 @@ const splitlines = (input, maxCharLength) => {
 const excerpt = post => {
 	const content = post.replace(/(<([^>]+)>)/gi, '');
 
-	return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
+	return content.substr(0, content.lastIndexOf(' ', 100)) + '...';
 };
 
 // modify default image size
-const imgSize = (src, size = '400', format = 'jpeg') => {
+const imgSize = (src, size = '571', format = 'webp') => {
 	const extension = path.extname(src);
 	const name = path.basename(src, extension);
 	const dirname = '/assets/images/';

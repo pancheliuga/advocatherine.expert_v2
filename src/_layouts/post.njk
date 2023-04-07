@@ -27,13 +27,16 @@ schema: blog
     {% include "partials/page-header.njk" %}
     {{ content | safe }}
   </div>
+</article>
   {% if recommendedPosts %}
   <footer class="recommended-posts">
-    {% set postslist = recommendedPosts %} {% set postListHeadline = 'Більше
-    статтей' %} 
-    {% include "partials/post-list.njk" %}
+    <div class="wrapper">
+      {% set postslist = recommendedPosts %}
+      <h2 class="_title">Більше статтей</h2> 
+      {% include "partials/post-list.njk" %}
+    </div>
   </footer>
   {% endif %}
-</article>
 
 {% include "partials/contact-form.njk" %}
+ 

@@ -3,9 +3,11 @@ title: 'ЯК МИ ПОВЕРНУЛИ КЛІЄНТУ ПЕНСІЮ і отрима
 description:
 date: '2023-03-20'
 tags: ['Пенсія']
+imgUrl: fa901f2a27f99724845a6975913693b3
+imgAlt: 'Фото гаманця'
 ---
 
-{% imagePlaceholder "./src/assets/images/08.jpg", "Alt... The preview image for social media", "" %}
+{% imagePlaceholder "./src/assets/images/fa901f2a27f99724845a6975913693b3.jpg", "Фото гаманця", "" %}
 
 **Розповім вам історію мого клієнта, яка почалась 4 роки тому, а завершилась нещодавно.**
 

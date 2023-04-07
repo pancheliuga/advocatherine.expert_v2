@@ -18,4 +18,4 @@ Syntax:
 
 ## Image with caption
 
-{% imagePlaceholder "./src/assets/images/opengraph-default.jpg", "Alt... The preview image for social media", "Caption.. An interesting caption." %}
+{% imagePlaceholder "./src/assets/images/certificates/00.jpg", "Alt... The preview image for social media", "Caption.. An interesting caption.", "(min-width:30em)  50vw, 100vw" %}
