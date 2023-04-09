@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: Про себе
   order: 4
-title: About
+title: Про адвоката Панчелюгу Катерину Миколаївну
 permalink: /about/index.html
-description: About this starter
+description: Професійна інформація про адвоката Панчелюгу Катерину Миколаївну
 layout: about
 ---

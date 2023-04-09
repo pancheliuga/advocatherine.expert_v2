@@ -1315,24 +1315,6 @@ padding: var(--space-m-l);
   max-width: 100%;
 }
 
-.certifications__text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  max-width: 561px;
-  margin: 0 auto;
-  margin-bottom: 15px;
-}
-
-.certifications__text span {
-  font-weight: 600;
-}
-
-.certifications__text.bold {
-  font-weight: 600;
-}
-
 .certificationsswiper-button-prev,
 .certificationsswiper-button-next {
   position: absolute;
@@ -1350,15 +1332,31 @@ padding: var(--space-m-l);
   left: -60px;
 }
 
+.education {
+  --wrapper-max-width: 47rem;
+}
+
+.education__text {
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.education__text.bold {
+  font-weight: 600;
+}
+
 .exp {
-  padding-top: 30px;
-  padding-bottom: 70px;
-  background: -o-linear-gradient(270.03deg, rgba(223, 235, 239, 0) 0.03%, #dfebef 52.32%, rgba(223, 235, 239, 0) 93.36%);
-  background: linear-gradient(179.97deg, rgba(223, 235, 239, 0) 0.03%, #dfebef 52.32%, rgba(223, 235, 239, 0) 93.36%);
+  background: linear-gradient(180deg,rgb(255 255 255 / 0%),#00373a30 46.34%,rgba(0,55,58,0));
+}
+
+.experience {
+  --wrapper-max-width: 70rem;
 }
 
 .exp__title {
-  margin-bottom: 74px;
+  padding-top: var(--space-l-2xl);
+  margin-bottom: var(--space-l-xl);
 }
 
 .exp__box {
@@ -1383,13 +1381,10 @@ padding: var(--space-m-l);
 
 .exp__date {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
   color: #00373a;
-  padding-bottom: 60px;
   border-right: 2px solid #c5846b;
   position: relative;
 }
@@ -1407,12 +1402,10 @@ padding: var(--space-m-l);
 
 .exp__text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 65%;
-          flex: 0 1 65%;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  padding-bottom: 60px;
+  padding-bottom: var(--space-l-2xl);
 }
 
 .emeriture {
@@ -2152,7 +2145,7 @@ padding: var(--space-m-l);
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-    padding-bottom: 20px;
+    padding-bottom: var(--space-s-m);
     border-right: none;
   }
 
