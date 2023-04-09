@@ -907,7 +907,6 @@ padding: var(--space-m-l);
 
 .blog__slide {
   height: auto;
-  border-bottom: 10px solid transparent;
   background: #f1f4f4;
   position: relative;
 }
@@ -1307,6 +1306,9 @@ padding: var(--space-m-l);
 
 .certifications__slide-img {
   text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .certifications__slide-img img {

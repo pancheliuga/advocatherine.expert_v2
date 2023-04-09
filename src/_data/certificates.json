@@ -1,6 +1,62 @@
-[
+[    
     {
-        "title": "00",
-        "alt": "Диплом"
+        "imgUrl": "./src/assets/images/certificates/1.jpg",
+        "imgAlt": "Почесна грамота - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/8.jpg",
+        "imgAlt": "Почесна грамота - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/2.jpg",
+        "imgAlt": "Подяка - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/00.jpg",
+        "imgAlt": "Диплом магістра - Панчелюги Катерини Миколаївни"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/01.jpg",
+        "imgAlt": "Диплом бакалавра - Панчелюги Катерини Миколаївни"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/3.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/4.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/5.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/6.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/7.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/9.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні "
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/10.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/11.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/12.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
+    },
+    {
+        "imgUrl": "./src/assets/images/certificates/13.jpg",
+        "imgAlt": "Сертифікат - Панчелюзі Катерині Миколаївні"
     }
 ]

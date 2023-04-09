@@ -11,7 +11,7 @@
                     {% for item in certificates %}
 					<div class="certifications__slide swiper-slide">
 						<div class="certifications__slide-img">
-							<img src="../assets/images/certificates/{{ item.title }}" alt="{{ item.alt}}">
+							{% imagePlaceholder item.imgUrl, item.imgAlt, "" %}
 						</div>
 					</div>
                     {% endfor %}
@@ -32,4 +32,4 @@
 			</div>
 		</div>
 	</div>
-</article>
+</article> 
