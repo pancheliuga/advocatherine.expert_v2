@@ -19,11 +19,14 @@
     </title>
 
     <!-- synchronous js / schema  -->
-    {% include "schemas/base-schema.njk" %} {% if schema == 'blog' %}
+    {% include "schemas/base-schema.njk" %} 
+    {% if schema == 'blog' %} 
     <!-- include blogpost schema  -->
-    {%- include "schemas/blogpost-schema.njk" %} {% elif schema == 'contacts' %} 
+    {%- include "schemas/blogpost-schema.njk" %} 
+    {% elif schema == 'organization' %} 
     <!-- include organization schema  -->
-    {%- include "schemas/organization-schema.njk" %} {% endif %}
+    {%- include "schemas/organization-schema.njk" %} 
+    {% endif %}
 
 
     <!-- synchronous css / inline css  -->

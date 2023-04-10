@@ -24,6 +24,7 @@
     "cssnano": "^5.1.15",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
+    "eleventy-plugin-googlestaticmaps": "^1.0.2",
     "esbuild": "^0.17.11",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",

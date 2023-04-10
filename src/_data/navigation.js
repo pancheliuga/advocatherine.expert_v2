@@ -10,7 +10,7 @@ module.exports = {
 		},
 		{
 			text: 'Контакти',
-			url: '/contact/'
+			url: '/contacts/'
 		},
 		{
 			text: 'Блог',

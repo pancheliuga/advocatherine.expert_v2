@@ -4,6 +4,6 @@ eleventyNavigation:
   order: 4
 title: Про адвоката Панчелюгу Катерину Миколаївну
 permalink: /about/index.html
-description: Професійна інформація про адвоката Панчелюгу Катерину Миколаївну
+description: Інформація щодо професійної діяльності адвоката Панчелюги Катерини Миколаївни
 layout: about
 ---
