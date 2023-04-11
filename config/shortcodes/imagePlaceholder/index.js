@@ -8,7 +8,7 @@ const imageShortcodePlaceholder = async (src, alt, caption, sizes = '100vw') => 
 	}
 
 	let metadata = await Image(src, {
-		widths: [400, 571, 800, 1080],
+		widths: [400, 571, 700],
 		formats: ['avif', 'webp', 'jpeg'],
 		urlPath: '/assets/images/',
 		outputDir: './dist/assets/images/',

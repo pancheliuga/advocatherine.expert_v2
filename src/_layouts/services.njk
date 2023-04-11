@@ -7,12 +7,15 @@ formTheme: secondary
 
 {% include "partials/header.njk" %}
 
-<article class="region">
-  <div class="wrapper flow prose">
-    {% include "partials/page-header.njk" %}
-    {{ content | safe }}
-  </div>
-</article>
+<div class="services region">
+  {% include "partials/breadcrumbs.njk" %}
+  <article>
+    <div class="wrapper flow prose">
+      {% include "partials/page-header.njk" %}
+      {{ content | safe }}
+    </div>
+  </article>
+</div>
 
 {% include "partials/contact-form.njk" %}
 
