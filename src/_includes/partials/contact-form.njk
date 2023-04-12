@@ -5,19 +5,21 @@
 				<h2 class="contact-form__title">Зв’яжіться зі мною
 				</h2>
 				<p class="contact-form__subtitle">Заповніть форму, щоб замовити зворотній дзвінок, або опишіть суть своєї проблеми</p>
-				<div class="contact-form__box-input">
-					<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ім’я" class="contact-form__input">
-				</div>
-				<div class="contact-form__box-input _flex">
-					<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Телефон" class="contact-form__input">
-					<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="E-mail" class="contact-form__input">
-				</div>
-				<div class="contact-form__box-input">
-					<textarea autocomplete="off" name="form[]" placeholder="Повідомлення" data-error="Помилка" class="contact-form__input"></textarea>
-				</div>
-				<div class="contact-form__button">
-					<button type="submit" class="button">Відправити</button>
-				</div>
+				<form action="/success" method="POST" data-netlify="true">
+					<div class="contact-form__box-input">
+						<input type="text" id="name" name="name" autocomplete="name" placeholder="Ім’я" class="contact-form__input" required="true">
+					</div>
+					<div class="contact-form__box-input _flex">
+						<input type="tel" id="telephone-number" name="telephone-number" autocomplete="tel" inputmode="tel" placeholder="Телефон" class="contact-form__input" required="true">
+						<input type="email" id="email" name="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="email" placeholder="E-mail" class="contact-form__input" required="true">
+					</div>
+					<div class="contact-form__box-input">
+						<textarea autocomplete="off" id="message" name="message" placeholder="Повідомлення" class="contact-form__input" rows="3"></textarea>
+					</div>
+					<div class="contact-form__button">
+						<button type="submit" class="button">Відправити</button>
+					</div>
+				</form>
 				<p class="contact-form__policy">*натискаючи «Відправити», Ви погоджуєтесь
 					з <a href="/privacy/">політикою конфіденційності</a>
 				</p>

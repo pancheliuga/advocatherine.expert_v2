@@ -1,7 +1,10 @@
 {% set assetHash = global.random() %}
 
 <!DOCTYPE html>
-<html lang="{{ meta.lang }}">
+<html lang="{{ meta.lang }}"
+    domain="{{ meta.domain }}"
+    >
+  
   <head>
     <!-- charset/http-equiv/viewport -->
     <meta charset="UTF-8" />
@@ -32,6 +35,8 @@
     <!-- synchronous css / inline css  -->
     <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" />
 
+    <link rel="preconnect" href="/" crossorigin>
+
     <!-- preloads -->
     <link
       rel="preload"
@@ -56,21 +61,7 @@
     />
     <link
       rel="preload"
-      href="/assets/fonts/inter/inter-v12-latin_cyrillic-ext-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
       href="/assets/fonts/forum/forum-v16-latin_cyrillic-ext-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/ubuntu/ubuntu-v20-latin_cyrillic-ext-300.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -86,7 +77,7 @@
             {% if preloads.crossorigin %}crossorigin{% endif %} />
     {% endif %}
 
-    <script type="module" src="/assets/scripts/app.js?{{ assetHash }}" defer></script>
+    <script type="module" src="/assets/scripts/app.js?{{ assetHash }}"></script>
 
     {% include "partials/meta-info.njk" %}
   </head>

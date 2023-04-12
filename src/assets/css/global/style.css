@@ -143,7 +143,7 @@ a {
 .block__more {
   margin: 0 auto;
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   color: #ffffff;
   padding: 16px 32px;
@@ -225,7 +225,6 @@ a {
 }
 
 .banner__top-divorce {
-  font-weight: 500;
   font-size: var(--size-step-01);
   line-height: 22px;
   text-decoration-line: underline;
@@ -273,7 +272,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .menu__link {
@@ -315,7 +314,7 @@ a {
 }
 
 .dropdown__list li {
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 15px;
 }
 
@@ -417,7 +416,7 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
 
 .first__name {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .first__work {
@@ -439,7 +438,7 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
 
 .first__consult {
   padding: 13px 26px;
-  font-weight: 500;
+  font-weight: 600;
   color: #ffffff;
   background: #00373a;
   border-radius: 40.7216px;
@@ -455,7 +454,7 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
       -ms-flex-align: center;
           align-items: center;
   gap: 17px;
-  font-weight: 500;
+  font-weight: 600;
   z-index: 2;
 }
 
@@ -734,7 +733,7 @@ padding: var(--space-m-l);
 }
 
 .contact-form__button button {
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   padding: 12px 55px;
   color: var(--color-light-glare);
@@ -1758,7 +1757,7 @@ padding: var(--space-m-l);
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     max-width: 70vw;
-    font-weight: 500;
+    font-weight: 600;
     background: #ffffff;
     color: #00373a;
     z-index: 3;

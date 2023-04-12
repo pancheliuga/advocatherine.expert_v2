@@ -1,5 +1,6 @@
 module.exports = {
 	url: process.env.URL || 'https://advocatherine.expert',
+	domain: 'advocatherine.expert',
 	siteName: 'Адвокат Панчелюга Катерина',
 	siteDescription: 'Персональний сайт адвоката Панчелюги Катерини Миколаївни',
 	siteType: 'Person', // schema
