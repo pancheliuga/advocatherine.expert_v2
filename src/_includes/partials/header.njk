@@ -1,0 +1,14 @@
+<header class="header__container wrapper" role="banner">
+	<div class="header__box-bottom">
+		<div class="header__logo">
+      {% set activePage = page.url | url %}
+			<a class="brand" href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>
+				{% include "svg/logo.svg" %}
+			</a>
+		</div>
+
+    {% include "partials/menu.njk" %}
+
+	</div>
+</header>
+

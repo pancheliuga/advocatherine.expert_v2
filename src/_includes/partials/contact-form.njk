@@ -1,0 +1,57 @@
+<section id="contact-form" class="contact-form region" data-theme="{{ formTheme }}"> 
+	<div class="contact-form__container wrapper">
+		<div class="contact-form__box">
+			<div class="contact-form__left flow">
+				<h2 class="contact-form__title">Зв’яжіться зі мною
+				</h2>
+				<p class="contact-form__subtitle">Заповніть форму, щоб замовити зворотній дзвінок, або опишіть суть своєї проблеми</p>
+				<form action="/success" method="POST" data-netlify="true">
+					<div class="contact-form__box-input">
+						<input type="text" id="name" name="name" autocomplete="name" placeholder="Ім’я" class="contact-form__input" required="true">
+					</div>
+					<div class="contact-form__box-input _flex">
+						<input type="tel" id="telephone-number" name="telephone-number" autocomplete="tel" inputmode="tel" placeholder="Телефон" class="contact-form__input" required="true">
+						<input type="email" id="email" name="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="email" placeholder="E-mail" class="contact-form__input" required="true">
+					</div>
+					<div class="contact-form__box-input">
+						<textarea autocomplete="off" id="message" name="message" placeholder="Повідомлення" class="contact-form__input" rows="3"></textarea>
+					</div>
+					<div class="contact-form__button">
+						<button type="submit" class="button">Відправити</button>
+					</div>
+				</form>
+				<p class="contact-form__policy">*натискаючи «Відправити», Ви погоджуєтесь
+					з <a href="/privacy/">політикою конфіденційності</a>
+				</p>
+			</div>
+			<div class="contact-form__right flow">
+				<h2 class="contact-form__title _right-title">Контакти
+				</h2>
+				<div class="contact-form__right-box">
+					<p class="contact-form__text">Телефон</p>
+					<a href="tel:+380971336851" class="contact-form__link">+38 097 133 68 51
+					</a>
+				</div>
+				<div class="contact-form__right-box">
+					<p class="contact-form__text">E-mail</p>
+					<a href="mailto:advocatherine@gmail.com" class="contact-form__link">advocate.rivne@gmail.com</a>
+				</div>
+				<div class="contact-form__right-box">
+					<p class="contact-form__text">Адреса</p>
+					<a href="https://goo.gl/maps/WSqvkUqKB3n" target="_blank" rel="noopener noreferrer" class="contact-form__link">м. Рівне, вул Паркова, 2</a>
+				</div>
+				<div class="contact-form__icons" aria-label="Social links">
+                    {% for item in social %}
+					<a href={{ item.url }} rel="me">
+						{% if formTheme %}
+						<div aria-hidden="true">{% include 'svg/' + item.iconWhite %}</div>
+						{% else %}
+						<div aria-hidden="true">{% include 'svg/' + item.icon %}</div>
+						{% endif %}	
+					</a>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

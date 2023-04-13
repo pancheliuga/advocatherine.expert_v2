@@ -1,0 +1,15 @@
+.post img {
+    width: 100%;
+    aspect-ratio: 5/3;
+    object-fit: cover;
+}
+
+@media (min-width: 48em) {
+    .post img {
+        max-width: 26rem;
+        float: right;
+        aspect-ratio: unset;
+        margin-left: var(--flow-space,1em);
+        margin-bottom: var(--flow-space,1em);
+    }
+}

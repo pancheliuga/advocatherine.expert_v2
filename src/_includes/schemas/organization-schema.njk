@@ -1,0 +1,41 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "image": [
+      "https://example.com/photos/1x1/photo.jpg",
+      "https://example.com/photos/4x3/photo.jpg",
+      "https://example.com/photos/16x9/photo.jpg"
+     ],
+    "name": "{{ meta.siteName }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ meta.address.street }}",
+      "addressLocality": "{{ meta.address.city }}",
+      "addressRegion": "{{ meta.address.region }}",
+      "postalCode": "{{ meta.address.zip }}",
+      "addressCountry": "{{ meta.address.country }}"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.61852709321243,
+      "longitude": 26.255195025811897
+    },
+    "url": "{{ meta.url }}",
+    "telephone": "{{ meta.address.mobileCall }}",
+    "email": "{{ meta.address.email }}",
+    "openingHoursSpecification": 
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+  }
+</script>

@@ -1,0 +1,38 @@
+<article class="media region">
+	<div class="media__container wrapper">
+		<h2 class="media__title _title">Я в медіа-просторі</h2>
+		<p class="media__subtitle _subtitle">Перегляньте відео моїх консультацій на телеканалі «Рівне 1»</p>
+		<div class="media__slider-box">
+			<!-- Оболонка слайдера -->
+			<div class="media__slider swiper" data-showmore="items">
+				<!-- Частина слайдера, що рухається -->
+                <div class="media__wrapper swiper-wrapper" data-showmore-content="3">
+                    <!-- Слайд -->
+                    {% for item in media %}  
+					<div class="media__slide swiper-slide">
+						{% youtube item.videoid, item.label %}
+						<p class="media__slider-title">{{ item.title }}</p>
+						<p class="media__slider-text">Ефір від {{ item.date }}</p>
+					</div>
+                    {% endfor %}
+				</div>
+				<button hidden data-showmore-button type="button" class="block__more mobile">
+					<a href="https://www.youtube.com/playlist?list=PLDKh9M3PsFucU9Z7I3gUJDp_ciF-Jnk7f" target="_blank">Більше відео</a>
+				</button>
+				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+				<button type="button" class="mediaswiper-button-prev">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 25L16 19L22 13" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+<rect x="39.5" y="39.5" width="39" height="39" transform="rotate(180 39.5 39.5)" stroke="#252525"/>
+</svg>
+				</button>
+				<button type="button" class="mediaswiper-button-next">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 15L23 21L17 27" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+<rect x="0.5" y="0.5" width="39" height="39" stroke="#252525"/>
+</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</article>

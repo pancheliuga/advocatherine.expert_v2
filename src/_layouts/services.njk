@@ -1,0 +1,24 @@
+---
+layout: base
+formTheme: secondary
+---
+
+{% set pageHeaderTitle = title %} 
+
+{% include "partials/header.njk" %}
+
+<div class="services region">
+  {% include "partials/breadcrumbs.njk" %}
+  <article>
+    <div class="wrapper flow prose">
+      {% include "partials/page-header.njk" %}
+      {{ content | safe }}
+    </div>
+  </article>
+</div>
+
+{% include "partials/contact-form.njk" %}
+
+{% include "partials/recent-posts.njk" %}
+
+ 

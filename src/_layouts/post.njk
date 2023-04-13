@@ -1,0 +1,43 @@
+---
+layout: base
+schema: blog
+formTheme: secondary
+---
+
+{% set pageHeaderTitle = title %} 
+{# Grab other posts that aren’t this one for the 'more from the blog' feed #} 
+{% set recommendedPosts = helpers.getSiblingContent(collections.posts, page) %}
+{# Render post date and any tags that this post has been filed under #} 
+{% set pageHeaderSummary %}
+{% set definedDate = date %} 
+{% include "partials/date.njk" %}
+{% if tags %}
+<p class="visually-hidden" id="tags-desc">Теги асоційовані зі статтею.</p>
+<ul class="blogpage__hashtag" aria-describedby="tags-desc" role='list'>
+  {% for tag in tags %}
+  <li>
+    <a href="/tag/{{ tag | slugify }}/">#{{ tag | title | replace(' ', '') }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endset %}
+{% include "partials/header.njk" %}
+<article class='post region'>
+  <div class="wrapper flow prose">
+    {% include "partials/page-header.njk" %}
+    {{ content | safe }}
+  </div>
+</article>
+  {% if recommendedPosts %}
+  <footer class="recommended-posts">
+    <div class="wrapper">
+      {% set postslist = recommendedPosts %}
+      <h2 class="_title">Більше статтей</h2> 
+      {% include "partials/post-list.njk" %}
+    </div>
+  </footer>
+  {% endif %}
+
+{% include "partials/contact-form.njk" %}
+  

@@ -1,0 +1,29 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+<nav id="mainnav" class="header__menu menu" aria-label="Main">
+	<button type="button" class="menu__icon icon-menu"><span></span></button>
+	<div class="menu__body">
+    {% macro renderNavListItem(entry) %}
+      {% if entry.children.length %}
+        <li class="menu__item dropdown">
+          <details>
+            {% for child in entry.children %}
+            {% endfor %}
+            <summary>{{ entry.title }}</summary>
+            <ul class="dropdown__list" role="list">
+              {% for child in entry.children %}{{ renderNavListItem(child) }}{% endfor %}
+            </ul>
+          </details>
+        </li>
+      {% else %}
+        <li class="menu__item">
+          <a href="{{ entry.url }}" class="menu__link" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+        </li>
+      {% endif %}
+    {% endmacro %}
+
+    <ul class="nav-list menu__list" role="list">
+    {% for entry in navPages %}{{ renderNavListItem(entry) }}{% endfor %}
+    </ul>
+  </div>
+</nav>

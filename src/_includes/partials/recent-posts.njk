@@ -1,0 +1,38 @@
+<article class="region">
+	<div class="blog__container wrapper">
+		<h2 class="blog__title _title">Мої дописи
+		</h2>
+		<p class="blog__subtitle _subtitle">Ознайомтеся з кількома цікавими випадками з мого професійного
+			життя</p>
+		<div class="blog__slider-box">
+			<!-- Оболонка слайдера -->
+			<div class="blog__slider swiper" data-showmore="items">
+				<!-- Частина слайдера, що рухається -->
+				<div class="blog__wrapper swiper-wrapper" data-showmore-content="3">
+					<!-- Слайд -->
+                    {% set postslist = collections.posts %} {% for post in postslist | limit(5) %}
+					<div class="blog__slide swiper-slide">
+						{% include "partials/blog-card.njk" %}
+					</div>
+                    {% endfor %}
+				</div>
+				<button hidden data-showmore-button type="button" class="block__more mobile">
+                    <a href="/blog/">Більше дописів</a>
+				</button>
+				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+				<button type="button" class="blogswiper-button-prev">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 25L16 19L22 13" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+<rect x="39.5" y="39.5" width="39" height="39" transform="rotate(180 39.5 39.5)" stroke="#252525"/>
+</svg>
+				</button>
+				<button type="button" class="blogswiper-button-next">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 15L23 21L17 27" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+<rect x="0.5" y="0.5" width="39" height="39" stroke="#252525"/>
+</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</article> 

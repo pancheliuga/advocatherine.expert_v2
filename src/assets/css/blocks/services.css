@@ -1,0 +1,25 @@
+.services {
+    --wrapper-max-width: 65rem;
+}
+
+.services img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+@media (min-width: 48em) {
+    .services figure:nth-child(odd) {
+        max-width: 26rem;
+        float: right;
+        margin-left: var(--flow-space,1em);
+        margin-bottom: var(--flow-space,1em);
+    }
+
+    .services figure:nth-child(even) {
+        max-width: 26rem;
+        float: left;
+        margin-right: var(--flow-space,1em);
+        margin-bottom: var(--flow-space,1em);
+    }
+}

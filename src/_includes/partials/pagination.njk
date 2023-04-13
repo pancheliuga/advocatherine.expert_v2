@@ -1,0 +1,17 @@
+<nav class="pagination__container" aria-label="Pages">
+  <div class="pagination__box">
+    <ol class="pagination-trail" role="list">
+      {% for href in pagination.hrefs %}
+        <li>
+          <a
+            href="{{ href }}"
+            class="pill pagination-page"
+            {% if href == page.url %}aria-current="page"{% endif %}
+          >
+            {{ loop.index }}
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
