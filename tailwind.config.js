@@ -33,7 +33,7 @@ module.exports = {
 		fontFamily,
 		fontWeight: {
 			normal: 400,
-			bold: 700,
+			bold: 600,
 			black: 800
 		},
 		backgroundColor: ({theme}) => theme('colors'),
