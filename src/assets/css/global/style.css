@@ -670,7 +670,7 @@ padding: var(--space-m-l);
 }
 
 .contact-form[data-theme="secondary"] {
-  background-image: url('../images/07.jpg');
+  background-image: url('../images/contact-form-bg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
