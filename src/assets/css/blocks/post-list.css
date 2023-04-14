@@ -1,11 +1,9 @@
 #post-list {
     --grid-placement: auto-fit;
-    padding: 0 var(--space-m);
 }
 
 @media (min-width: 55em) {
     #post-list {
         --grid-min-item-size:18rem;
-        padding: unset;
     }
 }

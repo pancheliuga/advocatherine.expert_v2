@@ -5,13 +5,18 @@
 				<h2 class="contact-form__title">Зв’яжіться зі мною
 				</h2>
 				<p class="contact-form__subtitle">Заповніть форму, щоб замовити зворотній дзвінок, або опишіть суть своєї проблеми</p>
-				<form action="/success" method="POST" data-netlify="true">
+				<form action="/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+					<p class="visually-hidden">
+    					<label>
+    					  Не заповнюй це поле якщо ти людина: <input name="bot-field" />
+    					</label>
+  					</p>
 					<div class="contact-form__box-input">
 						<input type="text" id="name" name="name" autocomplete="name" placeholder="Ім’я" class="contact-form__input" required="true">
 					</div>
 					<div class="contact-form__box-input _flex">
 						<input type="tel" id="telephone-number" name="telephone-number" autocomplete="tel" inputmode="tel" placeholder="Телефон" class="contact-form__input" required="true">
-						<input type="email" id="email" name="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="email" placeholder="E-mail" class="contact-form__input" required="true">
+						<input type="email" id="email" name="email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="email" placeholder="E-mail" class="contact-form__input">
 					</div>
 					<div class="contact-form__box-input">
 						<textarea autocomplete="off" id="message" name="message" placeholder="Повідомлення" class="contact-form__input" rows="3"></textarea>
