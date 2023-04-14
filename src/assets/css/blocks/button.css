@@ -1,1 +1,11 @@
-/* A blank block because there is *always* a button */
+.button {
+    border-radius: 9999px;  
+    display: block;
+    padding: 1rem 1.5rem;
+    background: var(--color-primary);
+    color: var(--color-light-glare);
+    text-decoration: none;
+    text-align: center;
+    min-width: 12em;
+    font-weight: 600;
+} 

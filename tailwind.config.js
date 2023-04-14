@@ -32,9 +32,9 @@ module.exports = {
 		fontSize,
 		fontFamily,
 		fontWeight: {
+			light: 300,
 			normal: 400,
-			bold: 600,
-			black: 800
+			bold: 600
 		},
 		backgroundColor: ({theme}) => theme('colors'),
 		textColor: ({theme}) => theme('colors'),
