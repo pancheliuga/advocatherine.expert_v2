@@ -30,7 +30,7 @@
 }
 
 .card__content h3 {
-  font-size: var(--size-step-0);
+  font-size: var(--size-step-01);
   max-width: unset;
   font-family: var(--font-base);
   font-weight: 600;
