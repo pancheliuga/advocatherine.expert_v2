@@ -9,7 +9,7 @@
 			<div class="sphere__item">
 				<div class="sphere__item-box">
 					<div class="sphere__icon">
-						<img src="assets/images/icons/{{ item.icon}}" alt="">
+						{% include "svg/" + item.icon %}
 					</div>
 					<div class="sphere__content">
 						<a href="{{ item.url | url }}" class="sphere__item-title">{{ item.title }}</a>

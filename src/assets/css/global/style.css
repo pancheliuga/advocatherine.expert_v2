@@ -396,7 +396,12 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
 }
 
 .first__motto {
-  font-size: var(--size-step-5);
+  --size-step-4: var(--size-step-5);
+  position: relative;
+}
+
+.first__motto svg{
+  display: none;
 }
 
 .first__cta > * {
@@ -488,8 +493,9 @@ padding: var(--space-m-l);
   gap: 28px;
 }
 
-.first__item-icon img {
-  max-width: 42px;
+.first__item-icon svg {
+  width: 42px;
+  height: auto;
 }
 
 .first__item-top {
@@ -546,9 +552,9 @@ padding: var(--space-m-l);
   position: relative;
 }
 
-.sphere__icon img {
-  display: inline-block;
+.sphere__icon svg {
   height: 42px;
+  width: auto;
 }
 
 .sphere__icon::before {
@@ -783,7 +789,7 @@ padding: var(--space-m-l);
 }
 
 .contact__map-img img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .contact__map-content {
@@ -814,7 +820,11 @@ padding: var(--space-m-l);
 }
 
 .contact__photo-img img {
-  max-width: 100%;
+  width: 100%;
+}
+
+.photos img {
+  width: 100%;
 }
 
 .blog.mobile {
@@ -905,6 +915,7 @@ padding: var(--space-m-l);
 }
 
 .blogpage__date {
+  display: block;
   font-weight: 600;
   color: #c5846b;
 }
@@ -1650,6 +1661,18 @@ padding: var(--space-m-l);
 
 @media (max-width: 47.99875em) {
 
+  .first__motto {
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  .first__motto svg{
+    display: block;
+    position: absolute;
+    top: -0.7rem;
+    left: -1.3rem;
+  }
+
   .brand svg {
     width: 180px;
     height: auto;
@@ -1782,9 +1805,9 @@ padding: var(--space-m-l);
     padding-bottom: var(--region-space-bottom, var(--space-l-2xl));
   }
 
-  .sphere__icon img {
-    display: inline-block;
+  .sphere__icon svg {
     height: 28px;
+    width: auto;
   }
 
   .media__wrapper {
@@ -2026,7 +2049,7 @@ padding: var(--space-m-l);
   }
 
   .certifications__slider-box {
-    margin-bottom: 120px;
+    margin-bottom: 70px;
   }
 
   .certificationsswiper-button-prev,

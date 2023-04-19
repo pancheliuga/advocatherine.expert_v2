@@ -7,7 +7,6 @@
 }
 
 div.page-header__text > * {
-  display: block;
   margin-top: var(--space-xs);
 }
   
