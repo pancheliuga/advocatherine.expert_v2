@@ -218,8 +218,8 @@ a {
   gap: 7px;
 }
 
-.banner__top-divorce {
-  font-size: var(--size-step-01);
+.banner__top-actual {
+  font-size: var(--size-step-001);
   line-height: 22px;
   text-decoration-line: underline;
   padding: 16px 0px;
@@ -267,6 +267,7 @@ a {
           align-items: center;
   gap: 50px;
   font-weight: 600;
+  font-size: var(--size-step-001);
 }
 
 .menu__link {
@@ -384,11 +385,6 @@ a.pill:is(:focus, :hover, [aria-current="page"]) {
 
 .first__container._about {
   position: relative;
-}
-
-.first__mob-link {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 .first__mob-link a {
@@ -1722,7 +1718,9 @@ padding: var(--space-m-l);
     display: inline-flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 20px;
   }
 
   .first__cta > * {

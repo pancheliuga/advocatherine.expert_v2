@@ -13,13 +13,13 @@
  }
 
  .nav-list summary:after {
-    content: url('../images/icons/down.svg');
+    content: url('../images/down.svg');
     padding-left: 5px;
  }
 
 
  .nav-list details[open] > summary:after {
-    content: url('../images/icons/up.svg');
+    content: url('../images/up.svg');
     padding-left: 5px;
 }
 
