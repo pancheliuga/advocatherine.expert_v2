@@ -1,9 +1,9 @@
 ---
-title: Legal notice
+title: Угода користувача
 seo:
-  title: Legal notice
+  title: Угода користувача
 permalink: /agreement/index.html
-description: User agreement
+description: Угода користувача
 layout: page
 ---
 
