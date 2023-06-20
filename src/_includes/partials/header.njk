@@ -2,7 +2,7 @@
 	<div class="header__box-bottom">
 		<div class="header__logo">
       {% set activePage = page.url | url %}
-			<a class="brand" href="/" {% if activePage === '/' %} aria-current="page" {% endif %}>
+			<a class="brand" href="/" {% if activePage === '/' %} aria-current="page" aria-label="Logo" {% endif %}>
 				{% include "svg/logo.svg" %}
 			</a>
 		</div>
