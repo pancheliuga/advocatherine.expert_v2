@@ -2,11 +2,11 @@
 title: 'Зменшення виплат по ДТП з 200 000 до 74 000 гривень'
 date: '2023-06-12'
 tags: ['ДТП', 'Страхова']
-imgUrl: 1fzyz-bmKBw
-imgAlt: 'Фото монеток'
+imgUrl: case-DTP
+imgAlt: 'Фото адвоката Катерини Панчелюги'
 ---
 
-{% imagePlaceholder "./src/assets/images/1fzyz-bmKBw.jpg", "Фото монеток", "" %}
+{% imagePlaceholder "./src/assets/images/case-DTP.jpg", "Фото адвоката Катерини Панчелюги", "" %}
 
 **Ви ж знаєте випадки, коли страхова «занижує» розмір страхового відшкодування після ДТП?**
 

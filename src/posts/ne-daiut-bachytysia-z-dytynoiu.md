@@ -2,11 +2,11 @@
 title: 'Не дають бачитися з дитиною'
 date: '2023-06-23'
 tags: ['Розлучення']
-imgUrl: 1fzyz-bmKBw
-imgAlt: 'Фото монеток'
+imgUrl: case-kids
+imgAlt: 'Фото адвоката Катерини Панчелюги'
 ---
 
-{% imagePlaceholder "./src/assets/images/1fzyz-bmKBw.jpg", "Фото монеток", "" %}
+{% imagePlaceholder "./src/assets/images/case-kids.jpg", "Фото адвоката Катерини Панчелюги", "" %}
 
 Неможливо побачити свою дитину?!
 

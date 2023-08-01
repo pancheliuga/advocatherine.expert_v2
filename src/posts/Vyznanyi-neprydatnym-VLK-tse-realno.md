@@ -1,12 +1,12 @@
 ---
 title: 'Визнаний непридатним ВЛК - це реально'
-date: '2023-08-01'
+date: '2023-07-18'
 tags: ['ВЛК', 'Мобілізація']
-imgUrl: 1fzyz-bmKBw
-imgAlt: 'Фото монеток'
+imgUrl: case-franch-friend
+imgAlt: 'Фото адвоката Катерини Панчелюги'
 ---
 
-{% imagePlaceholder "./src/assets/images/1fzyz-bmKBw.jpg", "Фото монеток", "" %}
+{% imagePlaceholder "./src/assets/images/case-franch-friend.jpg", "Фото адвоката Катерини Панчелюги", "" %}
 
 Зараз у всіх українців збільшилась кількість друзів, яких вiйнa розкидала по всьому світу.
 
