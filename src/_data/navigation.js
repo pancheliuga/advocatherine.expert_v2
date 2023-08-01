@@ -25,6 +25,10 @@ module.exports = {
 		{
 			text: 'Пенсійні справи',
 			url: '/services/pension/'
+		},
+		{
+			text: 'Сімейні спори',
+			url: '/services/family-disputes/'
 		}
 	],
 	policy: [

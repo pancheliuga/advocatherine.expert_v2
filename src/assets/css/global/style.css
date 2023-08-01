@@ -114,11 +114,6 @@ a {
   height: auto;
 }
 
-p,
-a {
-  display: block;
-}
-
 ._title {
   text-align: center;
   margin: 0 auto;
