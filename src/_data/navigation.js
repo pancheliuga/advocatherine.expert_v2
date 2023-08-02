@@ -29,6 +29,10 @@ module.exports = {
 		{
 			text: 'Сімейні спори',
 			url: '/services/family-disputes/'
+		},
+		{
+			text: 'Проблеми, пов’язані з ДТП',
+			url: '/services/road-accident/'
 		}
 	],
 	policy: [
