@@ -41,7 +41,7 @@ module.exports = {
 		closedText: 'Menu'
 	},
 	banner: {
-		title: 'Розлученя під час війни',
+		title: 'Розлучення під час війни',
 		url: '/blog/rozluchennya-pid-chas-voyennogo-stanu-chi-mozhlivo-ta-chi-yakosь-vidriznyayetьsya-vid-mirnogo-chasu/'
 	}
 };
