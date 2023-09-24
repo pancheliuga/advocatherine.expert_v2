@@ -18,6 +18,10 @@
 <meta name="generator" content="{{ eleventy.generator }}" /><!-- thank you, Zach -->
 <!-- Disable automatic detection and formatting of possible phone numbers -->
 <meta name="format-detection" content="telephone=no" />
+{% if meta.meta_data.facebookDomainVerification %}
+<!--Facebook Domain Verification -->
+<meta name="facebook-domain-verification" content="{{ meta.meta_data.facebookDomainVerification }}" />
+{% endif %}
 <!-- Helps prevent duplicate content issues -->
 <link rel="canonical" href="{{ meta.url }}{{ page.url }}" />
 
