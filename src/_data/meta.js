@@ -15,6 +15,7 @@ module.exports = {
 	meta_data: {
 		opengraph_default: '/assets/images/opengraph-default.jpg', // fallback/default meta image
 		opengraph_default_alt: 'Персональний сайт адвоката Панчелюги Катерини Миколаївни', // alt text for default meta image
+		facebookDomainVerification: '6oll7rjffmlz7di60wxutdq9xsbkms', // Facebook Domain Verification code
 		twitterSite: '',
 		twitterCreator: '',
 		mastodonProfile: ''
