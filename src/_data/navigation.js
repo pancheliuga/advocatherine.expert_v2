@@ -19,6 +19,10 @@ module.exports = {
 	],
 	services: [
 		{
+			text: 'Справи щодо нерухомого майна та землі',
+			url: '/services/real-estate/'
+		},
+		{
 			text: 'Справи, що стосуються мобілізації і військових',
 			url: '/services/mobilization/'
 		},
