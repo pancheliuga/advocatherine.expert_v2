@@ -3,7 +3,6 @@ eleventyNavigation:
   key: Головна
   order: 1
 permalink: /index.html
-title: 'Адвокат Панчелюга Катерина'
-description: 'Персональний сайт адвоката Панчелюги Катерини Миколаївни'
+description: 'Персональний сайт адвоката Катерини Панчелюги'
 layout: 'home'
 ---

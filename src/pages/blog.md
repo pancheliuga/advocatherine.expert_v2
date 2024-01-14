@@ -2,7 +2,7 @@
 eleventyNavigation:
   key: Блог
   order: 6
-title: Блог адвоката Катерини Панчелюги
+title: Блог
 layout: blog
 pagination:
   data: collections.posts

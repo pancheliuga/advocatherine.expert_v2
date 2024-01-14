@@ -1,20 +1,20 @@
 module.exports = {
 	url: process.env.URL || 'https://advocatherine.expert',
 	domain: 'advocatherine.expert',
-	siteName: 'Адвокат Панчелюга Катерина',
-	siteDescription: 'Персональний сайт адвоката Панчелюги Катерини Миколаївни',
+	siteName: 'Адвокат Катерина Панчелюга',
+	siteDescription: 'Персональний сайт адвоката Катерини Панчелюги',
 	siteType: 'Person', // schema
 	locale: 'uk_UA',
 	lang: 'uk',
 	skipContent: 'Перейти до контенту',
-	author: 'Панчелюга Катерина Миколаївна',
+	author: 'Катерина Панчелюга',
 	authorEmail: 'advocate.rivne@gmail.com',
 	authorWebsite: '',
 	themeColor: '#00373A', //  Manifest: defines the default theme color for the application
 	themeBgColor: '#F5F5F5', // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
 	meta_data: {
 		opengraph_default: '/assets/images/opengraph-default.jpg', // fallback/default meta image
-		opengraph_default_alt: 'Персональний сайт адвоката Панчелюги Катерини Миколаївни', // alt text for default meta image
+		opengraph_default_alt: 'Персональний сайт адвоката Катерини Панчелюги', // alt text for default meta image
 		facebookDomainVerification: '6oll7rjffmlz7di60wxutdq9xsbkms', // Facebook Domain Verification code
 		twitterSite: '',
 		twitterCreator: '',
