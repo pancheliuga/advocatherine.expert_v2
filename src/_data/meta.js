@@ -33,8 +33,9 @@ module.exports = {
 		region: 'Рівненська область',
 		country: 'Україна',
 		zip: '33028',
-		mobileDisplay: '+38 097 133 68 51',
-		mobileCall: ' +380976450174',
+		addressDisplay: 'м. Рівне, вул Паркова, 2',
+		mobileDisplay: '+38 068 37 40 7 40',
+		mobileCall: ' +380683740740',
 		email: 'advocate.rivne@gmail.com',
 		cif: ''
 	},

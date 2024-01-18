@@ -34,16 +34,16 @@
 				</h2>
 				<div class="contact-form__right-box">
 					<p class="contact-form__text">Телефон</p>
-					<a href="tel:+380971336851" class="contact-form__link">+38 097 133 68 51
+					<a href="tel:{{ meta.address.mobileCall }}" class="contact-form__link">{{ meta.address.mobileDisplay }}
 					</a>
 				</div>
 				<div class="contact-form__right-box">
 					<p class="contact-form__text">E-mail</p>
-					<a href="mailto:advocatherine@gmail.com" class="contact-form__link">advocate.rivne@gmail.com</a>
+					<a href="mailto:{{ meta.address.email }}" class="contact-form__link">{{ meta.address.email }}</a>
 				</div>
 				<div class="contact-form__right-box">
 					<p class="contact-form__text">Адреса</p>
-					<a href="https://goo.gl/maps/WSqvkUqKB3n" target="_blank" rel="noopener noreferrer" class="contact-form__link">м. Рівне, вул Паркова, 2</a>
+					<a href="https://goo.gl/maps/WSqvkUqKB3n" target="_blank" rel="noopener noreferrer" class="contact-form__link">{{ meta.address.addressDisplay }}</a>
 				</div>
 				<div class="contact-form__icons">
                     {% for item in social %}
