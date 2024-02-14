@@ -27,10 +27,6 @@ module.exports = {
 			url: '/services/mobilization/'
 		},
 		{
-			text: 'Пенсійні справи',
-			url: '/services/pension/'
-		},
-		{
 			text: 'Сімейні спори',
 			url: '/services/family-disputes/'
 		},
