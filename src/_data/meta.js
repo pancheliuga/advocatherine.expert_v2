@@ -43,7 +43,7 @@ module.exports = {
 		closedText: 'Menu'
 	},
 	banner: {
-		title: 'Розлучення під час війни',
-		url: '/blog/rozluchennya-pid-chas-voyennogo-stanu-chi-mozhlivo-ta-chi-yakos-vidriznyayetsya-vid-mirnogo-chasu/'
+		title: 'Адвокатський запит до в/ч',
+		url: 'services/lawyers-request/'
 	}
 };
