@@ -2,7 +2,7 @@
 eleventyNavigation:
   key: Вартість
   order: 3
-title: Вартість
+title: Вартість послуг
 description: 'Вартість послуг адвоката Катерини Панчелюги'
 layout: pricing
 permalink: /pricing/index.html

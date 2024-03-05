@@ -9,7 +9,7 @@ formTheme: secondary
 {% set recommendedPosts = helpers.getSiblingContent(collections.posts, page) %}
 {# Render post date and any tags that this post has been filed under #} 
 {% set pageHeaderSummary %}
-{% set definedDate = date %} 
+{% set definedDate = date %}
 {% include "partials/date.njk" %}
 {% if tags %}
 <p class="visually-hidden" id="tags-desc">Теги асоційовані зі статтею.</p>
