@@ -23,7 +23,7 @@ module.exports = {
 			url: '/services/real-estate/'
 		},
 		{
-			text: 'Справи, що стосуються мобілізації і військових',
+			text: 'Військові справи та мобілізація',
 			url: '/services/mobilization/'
 		},
 		{
