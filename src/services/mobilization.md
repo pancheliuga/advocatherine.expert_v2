@@ -2,6 +2,7 @@
 eleventyNavigation:
   key: Справи, що стосуються мобілізації і військових
   parent: Послуги
+  order: 2
 layout: services
 title: Справи, що стосуються мобілізації і військових
 ---

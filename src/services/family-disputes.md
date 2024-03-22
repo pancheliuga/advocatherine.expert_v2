@@ -2,6 +2,7 @@
 eleventyNavigation:
   key: Сімейні спори
   parent: Послуги
+  order: 3
 layout: services
 title: Сімейні спори
 ---

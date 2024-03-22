@@ -19,12 +19,16 @@ module.exports = {
 	],
 	services: [
 		{
-			text: 'Справи щодо нерухомого майна та землі',
-			url: '/services/real-estate/'
+			text: 'Адвокатський запит до військової частини',
+			url: '/services/lawyers-request/'
 		},
 		{
 			text: 'Справи, що стосуються мобілізації і військових',
 			url: '/services/mobilization/'
+		},
+		{
+			text: 'Справи щодо нерухомого майна та землі',
+			url: '/services/real-estate/'
 		},
 		{
 			text: 'Сімейні спори',
