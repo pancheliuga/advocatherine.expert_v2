@@ -2,6 +2,7 @@
 eleventyNavigation:
   key: Справи щодо нерухомого майна та землі
   parent: Послуги
+  order: 4
 layout: services
 title: Справи щодо нерухомого майна та землі
 ---
