@@ -44,6 +44,6 @@ module.exports = {
 	},
 	banner: {
 		title: 'Адвокатський запит до в/ч',
-		url: 'services/lawyers-request/'
+		url: '/services/lawyers-request/'
 	}
 };
