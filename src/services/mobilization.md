@@ -2,6 +2,7 @@
 eleventyNavigation:
   key: Військові справи та мобілізація
   parent: Послуги
+  order: 2
 layout: services
 title: Військові справи та мобілізація
 ---

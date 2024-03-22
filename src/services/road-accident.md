@@ -2,6 +2,7 @@
 eleventyNavigation:
   key: Проблеми, пов’язані з ДТП
   parent: Послуги
+  order: 5
 layout: services
 title: Проблеми, пов’язані з ДТП
 ---
