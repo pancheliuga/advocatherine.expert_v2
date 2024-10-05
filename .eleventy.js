@@ -1,51 +1,57 @@
-// get package.json
-const packageVersion = require('./package.json').version;
-
-// module import filters
-const {
-	limit,
-	toHtml,
-	where,
-	toISOString,
-	formatDate,
-	toAbsoluteUrl,
-	stripHtml,
-	minifyCss,
-	minifyJs,
-	mdInline,
-	splitlines,
-	excerpt,
-	imgSize
-} = require('./config/filters/index.js');
-
-// module import shortcodes
-const {
-	imageShortcodePlaceholder,
-	includeRaw,
-	liteYoutube
-} = require('./config/shortcodes/index.js');
-
-// module import collections
-const {getAllPosts} = require('./config/collections/index.js');
-
-// module import events
-const {svgToJpeg} = require('./config/events/index.js');
-
-// plugins
-const markdownLib = require('./config/plugins/markdown.js');
-const {EleventyRenderPlugin} = require('@11ty/eleventy');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const {slugifyString} = require('./config/utils');
-const {escape} = require('lodash');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-
-module.exports = eleventyConfig => {
-	// 	--------------------- Custom Watch Targets -----------------------
+module.exports = async function(eleventyConfig) {
+	// Dynamic imports for Eleventy v3 compatibility
+	const {
+	  EleventyRenderPlugin,
+	  EleventyI18nPlugin,
+	  EleventyHtmlBasePlugin
+	} = await import("@11ty/eleventy");
+  
+	// get package.json
+	const packageVersion = require('./package.json').version;
+  
+	// module import filters
+	const {
+	  limit,
+	  toHtml,
+	  where,
+	  toISOString,
+	  formatDate,
+	  toAbsoluteUrl,
+	  stripHtml,
+	  minifyCss,
+	  minifyJs,
+	  mdInline,
+	  splitlines,
+	  excerpt,
+	  imgSize
+	} = require('./config/filters/index.js');
+  
+	// module import shortcodes
+	const {
+	  imageShortcodePlaceholder,
+	  includeRaw,
+	  liteYoutube
+	} = require('./config/shortcodes/index.js');
+  
+	// module import collections
+	const {getAllPosts} = require('./config/collections/index.js');
+  
+	// module import events
+	const {svgToJpeg} = require('./config/events/index.js');
+  
+	// plugins
+	const markdownLib = require('./config/plugins/markdown.js');
+	const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+	const {slugifyString} = require('./config/utils');
+	const {escape} = require('lodash');
+	const pluginRss = require('@11ty/eleventy-plugin-rss');
+	const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
+	const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+  
+	// --------------------- Custom Watch Targets -----------------------
 	eleventyConfig.addWatchTarget('./src/assets');
 	eleventyConfig.addWatchTarget('./utils/*.js');
-
+  
 	// --------------------- layout aliases -----------------------
 	eleventyConfig.addLayoutAlias('base', 'base.njk');
 	eleventyConfig.addLayoutAlias('page', 'page.njk');
@@ -54,8 +60,8 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addLayoutAlias('post', 'post.njk');
 	eleventyConfig.addLayoutAlias('pricing', 'pricing.njk');
 	eleventyConfig.addLayoutAlias('contacts', 'contacts.njk');
-
-	// 	---------------------  Custom filters -----------------------
+  
+	// --------------------- Custom filters -----------------------
 	eleventyConfig.addFilter('limit', limit);
 	eleventyConfig.addFilter('where', where);
 	eleventyConfig.addFilter('escape', escape);
@@ -76,65 +82,61 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addFilter('keys', Object.keys);
 	eleventyConfig.addFilter('values', Object.values);
 	eleventyConfig.addFilter('entries', Object.entries);
-
-	// 	--------------------- Custom shortcodes ---------------------
+  
+	// --------------------- Custom shortcodes ---------------------
 	eleventyConfig.addNunjucksAsyncShortcode('imagePlaceholder', imageShortcodePlaceholder);
 	eleventyConfig.addShortcode('youtube', liteYoutube);
 	eleventyConfig.addShortcode('include_raw', includeRaw);
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`); // current year, stephanie eckles
 	eleventyConfig.addShortcode('packageVersion', () => `v${packageVersion}`);
-
-	// 	--------------------- Custom transforms ---------------------
+  
+	// --------------------- Custom transforms ---------------------
 	eleventyConfig.addPlugin(require('./config/transforms/html-config.js'));
-
-	// 	--------------------- Custom Template Languages ---------------------
+  
+	// --------------------- Custom Template Languages ---------------------
 	eleventyConfig.addPlugin(require('./config/template-languages/css-config.js'));
 	eleventyConfig.addPlugin(require('./config/template-languages/js-config.js'));
-
-	// 	--------------------- Custom collections -----------------------
+  
+	// --------------------- Custom collections -----------------------
 	eleventyConfig.addCollection('posts', getAllPosts);
-
-	// 	--------------------- Events ---------------------
+  
+	// --------------------- Events ---------------------
 	eleventyConfig.on('afterBuild', svgToJpeg);
-
-	// 	--------------------- Plugins ---------------------
+  
+	// --------------------- Plugins ---------------------
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.setLibrary('md', markdownLib);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(inclusiveLangPlugin);
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-	// 	--------------------- Passthrough File Copy -----------------------
+  
+	// --------------------- Passthrough File Copy -----------------------
 	// same path
 	['src/assets/fonts/', 'src/assets/images/'].forEach(path =>
-		eleventyConfig.addPassthroughCopy(path)
+	  eleventyConfig.addPassthroughCopy(path)
 	);
-
+  
 	// social icons to root directory
 	eleventyConfig.addPassthroughCopy({
-		'src/assets/images/favicon/*': '/'
+	  'src/assets/images/favicon/*': '/'
 	});
-
+  
 	eleventyConfig.addPassthroughCopy({
-		'src/assets/css/global.css': 'src/_includes/global.css'
+	  'src/assets/css/global.css': 'src/_includes/global.css'
 	});
-
-	// 	--------------------- general config -----------------------
+  
+	// --------------------- general config -----------------------
 	return {
-		// Pre-process *.md, *.html and global data files files with: (default: `liquid`)
-		markdownTemplateEngine: 'njk',
-		htmlTemplateEngine: 'njk',
-		dataTemplateEngine: 'njk',
-
-		// Optional (default is set): If your site deploys to a subdirectory, change `pathPrefix`, for example with with GitHub pages
-		pathPrefix: '/',
-
-		dir: {
-			output: 'dist',
-			input: 'src',
-			includes: '_includes',
-			layouts: '_layouts'
-		}
+	  markdownTemplateEngine: 'njk',
+	  htmlTemplateEngine: 'njk',
+	  dataTemplateEngine: 'njk',
+  
+	  dir: {
+		output: 'dist',
+		input: 'src',
+		includes: '_includes',
+		layouts: '_layouts'
+	  }
 	};
-};
+  };
