@@ -9,6 +9,10 @@ module.exports = {
 			url: '/about/'
 		},
 		{
+			text: 'Відгуки',
+			url: '/reviews/'
+		},
+		{
 			text: 'Контакти',
 			url: '/contacts/'
 		},
