@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
   key: Блог
-  order: 6
+  order: 7
 title: Блог
 layout: blog
 pagination:
