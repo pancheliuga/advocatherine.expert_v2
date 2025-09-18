@@ -4098,6 +4098,34 @@
 					}
 				}
 			});
+			if (document.querySelector('.reviews__slider'))
+				new core('.reviews__slider', {
+					modules: [Navigation],
+					observer: true,
+					observeParents: true,
+					slidesPerView: 3,
+					spaceBetween: 30,
+					speed: 800,
+					loop: true,
+					navigation: {
+						prevEl: '.reviewsswiper-button-prev',
+						nextEl: '.reviewsswiper-button-next'
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 1,
+							spaceBetween: 0
+						},
+						768: {
+							slidesPerView: 2,
+							spaceBetween: 20
+						},
+						992: {
+							slidesPerView: 3,
+							spaceBetween: 30
+						}
+					}
+				});
 		breakpoint.addListener(breakpointChecker);
 		breakpointChecker();
 	})();

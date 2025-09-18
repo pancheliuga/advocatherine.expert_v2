@@ -1,0 +1,35 @@
+<article class="reviews region">
+	<div class="reviews__container wrapper">
+		<h2 class="reviews__title _title">Відгуки клієнтів
+		</h2>
+		<div class="reviews__slider-box">
+			<!-- Оболонка слайдера -->
+			<div class="reviews__slider swiper">
+				<!-- Частина слайдера, що рухається -->
+				<div class="reviews__wrapper swiper-wrapper">
+					<!-- Слайд -->
+                    {% for item in reviews %}
+					<div class="reviews__slide swiper-slide">
+						<div class="reviews__slide-img">
+							{% imagePlaceholder item.imgUrl, item.imgAlt, "" %}
+						</div>
+					</div>
+                    {% endfor %}
+				</div>
+				<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+				<button type="button" class="reviewsswiper-button-prev">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 25L16 19L22 13" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+<rect x="39.5" y="39.5" width="39" height="39" transform="rotate(180 39.5 39.5)" stroke="#252525"/>
+</svg>
+				</button>
+				<button type="button" class="reviewsswiper-button-next">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 15L23 21L17 27" stroke="#252525" stroke-width="2" stroke-linecap="round"/>
+<rect x="0.5" y="0.5" width="39" height="39" stroke="#252525"/>
+</svg> 
+				</button>
+			</div>
+		</div>
+	</div>
+</article> 
